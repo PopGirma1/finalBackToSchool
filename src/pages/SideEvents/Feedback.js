@@ -22,7 +22,7 @@ const useStyles = (theme) => ({
         "& .MuiFilledInput-root": {
             background: "#3F51B5",
             color: "#ffffff",
-            borderRadius: "10px",
+            borderRadius: "12px",
             borderStyle: "none",
             focus: "none",
             /**the input field property always override here  */
@@ -150,7 +150,6 @@ const parentDivStyling = {
     margin: "auto",
     justifyContent: "center",
     flexDirection: "column",
-    background: "#eee",
 };
 
 // FeedBack.PropTypes = {

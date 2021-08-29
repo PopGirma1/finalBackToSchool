@@ -16,7 +16,8 @@ const useStyles = ((theme) => ({
   root: {
   },
   mainParts: {
-    marginTop: '120px'
+    marginTop: '120px',
+    marginBottom:'3px'
   },
 }));
 class App extends React.Component {

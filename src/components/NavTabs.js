@@ -1,7 +1,7 @@
 import React from 'react'
 import {AppBar, Button, Grid, Link, List, ListItem, Toolbar, Typography, withStyles} from "@material-ui/core/index";
 import {Redirect} from "react-router-dom";
-// import Avatar from 'react-avatar';
+import Avatar from 'react-avatar';
 
 const useStyles = ((theme) => ({
     root: {
@@ -32,6 +32,7 @@ const useStyles = ((theme) => ({
     logo:{
         width: '100px',
         height: "100px",
+        marginLeft: '-10px'
     }
 }));
 
@@ -75,10 +76,13 @@ class NavTabs extends React.Component {
             <AppBar className={classes.root} position='fixed' >
                 <Toolbar>
                     <Grid container >
+                        <Grid item sm={1}  >
+                            <Avatar alt="Remy Sharp" src="/asset/img/logo1.jpg" className={classes.logo}/>
+                        </Grid>
                         <Grid item sm={3}   >
                             <Typography variant='h4' style={{color:'red',margin:'10px'}}>Back to School Ethiopia</Typography>
-                            {/*<Avatar alt="Remy Sharp" src="/asset/img/logo.jpg" className={classes.logo}/>*/}
                         </Grid>
+
                         <Grid item sm={8} align='center'>
                             {this.isAuthnticated()}
                         </Grid>
