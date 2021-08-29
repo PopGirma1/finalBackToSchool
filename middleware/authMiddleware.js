@@ -4,7 +4,8 @@ const authAdmin=(req,res,next)=>{
     if(tocken){
         jwt.verify(tocken,"secret-key",(err,decodedTocken)=>{
             if(err){
-                console.log("failed to autenticate user")
+                console.log("failed to autenticate admin")
+                return
             }else{
                 console.log("Admin  authenticated true",decodedTocken)
                 next()
@@ -12,6 +13,7 @@ const authAdmin=(req,res,next)=>{
         })
     }else{
         console.log("failed to autenticate admin")
+        return 
     }
 }
 
