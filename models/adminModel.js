@@ -19,10 +19,10 @@ const admin=new userSchema({
 })
 
 admin.statics.login =async function(email,password){
-    const user = await this.findOne({email});
+    const admin = await this.findOne({email});
     const salt=await bcrypt.genSalt()
-    if(user ){
-        const auth=await bcrypt.compare( password , user.password )
+    if(admin ){
+        const auth=await bcrypt.compare( password , admin.password )
         if(auth){
             return user
         }

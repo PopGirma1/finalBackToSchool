@@ -1,9 +1,9 @@
 //import all required modules here
 const express=require('express')
 const mongoose=require('mongoose')
-const userRouter=require('./routes/userRouter')
+const adminRouter=require('./routes/adminRouter')
 const eventRouter=require('./routes/eventRouter')
-const companyRouter=require('./routes/companyRouter')
+
 
 //conect to the database
 const uri = "mongodb://localhost/back2school"
@@ -27,7 +27,7 @@ app.listen(3000,"localhost")
 app.use(express.static(__dirname+"./public/"))
 
 app.get('/',(req,res)=>{res.send("home")})
-app.use('/users',userRouter)
+app.use('/admin',adminRouter)
 app.use('/events',eventRouter)
 app.use('/visitors',vistorController)
 
