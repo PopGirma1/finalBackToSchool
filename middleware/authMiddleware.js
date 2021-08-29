@@ -1,5 +1,5 @@
 const jwt=require('jsonwebtoken')
-const User = require('../models/userModel')
+const Admin = require('../models/adminModel')
 const authUser=(req,res,next)=>{
     const tocken=req.cookies.jwt;
     if(tocken){
@@ -25,7 +25,7 @@ const currentUser=(req,res,next)=>{
                 next()
             }else{
                 console.log(decodedTocken)
-                const user=await User.findById(decodedTocken.id)
+                const user=await Admin.findById(decodedTocken.id)
                 res.locals.user=user
                 next()
             }
