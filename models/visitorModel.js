@@ -2,10 +2,9 @@ const mongoose=require('mongoose')
 const customerSchema=mongoose.Schema;
 const {isEmail} = require("validator")
 
-const customer=new customerSchema({
+const visitor=new customerSchema({
     firstName: String,
     lastName: String,
-    company:String,
     email: {
         type:String,
         required:true,
@@ -22,13 +21,8 @@ const customer=new customerSchema({
         default:null,
         enum:["Head","Student","Universty teacher","Special teacher","Other"]
     },
-    role: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Role"
-          }
-      ,
     
 })
 
-const customerModel=mongoose.model("Customer",customer)
-module.exports=customerModel
+const visitorModel=mongoose.model("Customer",visitor)
+module.exports=visitorModel

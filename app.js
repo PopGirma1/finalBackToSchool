@@ -3,6 +3,7 @@ const express=require('express')
 const mongoose=require('mongoose')
 const adminRouter=require('./routes/adminRouter')
 const eventRouter=require('./routes/eventRouter')
+const visitorRouter=require('./routes/visitorRouter')
 
 
 //conect to the database
@@ -29,5 +30,5 @@ app.use(express.static(__dirname+"./public/"))
 app.get('/',(req,res)=>{res.send("home")})
 app.use('/admin',adminRouter)
 app.use('/events',eventRouter)
-app.use('/visitors',vistorController)
+app.use('/visitors',visitorRouter)
 
