@@ -1,8 +1,8 @@
 const mongoose=require('mongoose')
-const userSchema=mongoose.Schema;
+const adminSchema=mongoose.Schema;
 const {isEmail} = require("validator")
 const bcrypt=require('bcrypt')
-const admin=new userSchema({
+const admin=new adminSchema({
     firstName: String,
     lastName: String,
     email: {
@@ -24,7 +24,7 @@ admin.statics.login =async function(email,password){
     if(admin ){
         const auth=await bcrypt.compare( password , admin.password )
         if(auth){
-            return user
+            return auth
         }
         throw Error("incorrect password")
     }

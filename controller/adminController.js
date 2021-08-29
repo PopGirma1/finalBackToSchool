@@ -9,15 +9,23 @@ const createTocken=(id)=>{
 }
 
 const createAccount=async (req,res)=>{
-    const admin = new Admin({
-        firstName: req.body.firstName,
-        lastName: req.body.lastName,
-        email: req.body.email,
-        password: bcrypt.hashSync(req.body.password,await bcrypt.genSalt())
-      });
+
+      const firstName=req.body.firstName
+      const lastName=req.body.lastName
+      const email=req.body.email
+      const password=await bcrypt.hashSync(req.body.password,await bcrypt.genSalt())
 
       try {
-          await admin.create()
+          const adminn=await Admin.create({firstName,lastName,email,password})
+          if(adminn){
+            const tocken= createTocken(adimn._id)
+            res.cookie('jwt',tocken,{httpOnly:true,maxAge:maxAge*1000})
+            res.status(200).json({adimn:adimn._id,tocken})
+            console.log("successfully created admin")
+          }else{
+              console.log("Error while creating admin")
+              throw Error("Failed to create admin")
+          }
       }catch(err){res.json(err)}
 
 }
