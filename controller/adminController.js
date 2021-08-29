@@ -1,8 +1,9 @@
 const Admin = require('../models/adminModel')
-const Role=require('../models/role')
 var jwt = require('jsonwebtoken');
 const bcrypt=require('bcrypt')
 const maxAge= 3 * 24 * 64 * 64;
+
+
 const createTocken=(id)=>{
     return jwt.sign({id},"secret-key",{expiresIn:maxAge})
 }
@@ -24,11 +25,11 @@ const createAccount=async (req,res)=>{
 const adminLogIn=async (req,res)=>{
     const {email,password}=req.body;
     try{
-        const user = await Admin.login(email,password)
-        if(user){
-            const tocken=createTocken(user._id)
+        const adimn = await Admin.login(email,password)
+        if(adimn){
+            const tocken=createTocken(adimn._id)
             res.cookie('jwt',tocken,{httpOnly:true,maxAge:maxAge*1000})
-            res.status(200).json({user:user._id,tocken})
+            res.status(200).json({adimn:adimn._id,tocken})
         }
     }catch(err){console.log(err)} 
 }
