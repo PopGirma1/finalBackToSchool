@@ -3,13 +3,22 @@ const eventSchema=mongoose.Schema;
 
 const event=new eventSchema(
     {
-        title:String,
+        title:{
+            type:String,
+            require:true,
+            unique:true,
+        },
+        type:{
+            type:String,
+            require:true,
+            enum:["seminar","competition","workshop"],
+        },
         eventDate:Date,
         // describingImg:String,
-        owner: { 
+        participants: [{ 
             type: mongoose.Schema.Types.ObjectId, 
-            ref: 'User' 
-          }, 
+            ref: 'User'
+          }], 
     },
     {
         timestamps:true

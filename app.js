@@ -29,5 +29,5 @@ app.use(express.static(__dirname+"./public/"))
 app.get('/',(req,res)=>{res.send("home")})
 app.use('/users',userRouter)
 app.use('/events',eventRouter)
-app.use('/companies',companyRouter)
+app.use('/visitors',vistorController)
 

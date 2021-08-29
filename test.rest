@@ -1,2 +1,2 @@
 
-GET localhost:3000/users
+GET localhost:3000

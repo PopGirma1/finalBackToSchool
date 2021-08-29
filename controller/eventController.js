@@ -1,16 +1,16 @@
 const Event = require('../models/eventModel')
 
-
 const postEvent=async (req,res)=>{
-    const {title,eventDate}=req.body
-    // const {discribingImg}= req.file.filename
+    const {title,type,eventDate}=req.body
     try{
-        const event=await Event.create({title,eventDate})
+        const event=await Event.create({title,type,eventDate})
         if(event){
             res.status(200).json(event)
         }
     }catch(err){res.status(400).json(err)}
 }
+
+
 const searchEventByName=(req,res)=>{
     const name=req.params.name
     try{
