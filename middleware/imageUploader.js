@@ -10,6 +10,7 @@ const storage = multer.diskStorage({
         callback(null,Date.now()+file.originalname)
     }
 })
+
 //uploading parameter 4 multer
 const upload =multer({
     storage:storage,

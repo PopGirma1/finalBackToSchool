@@ -47,10 +47,20 @@ const adminLogOut=async (req,res)=>{
     res.status(400).json("Successfully logged out")
 }
 
+const newHackathon=(req,res)=>{
+
+}
+
+const newEvent=(req,res)=>{
+    
+}
+
 module.exports={
     createAccount,
     adminLogIn,
-    adminLogOut
+    newEvent,
+    newHackathon,
+    adminLogOut,
 }
 
 

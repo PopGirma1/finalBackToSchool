@@ -13,16 +13,14 @@ const visitor=new customerSchema({
     },
     bussinessSector:{
         type:String,
-        default:null,
-        enum:["Day care","High school","Universty","Polytechnic","Art"]
     },
+
     profession:{
         type:String,
         default:null,
-        enum:["Head","Student","Universty teacher","Special teacher","Other"]
     },
     
 })
 
-const visitorModel=mongoose.model("Customer",visitor)
+const visitorModel=mongoose.model("Visitor",visitor)
 module.exports=visitorModel

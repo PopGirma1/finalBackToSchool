@@ -1,8 +1,7 @@
 const mongoose=require('mongoose')
 const eventSchema=mongoose.Schema;
 
-const event=new eventSchema(
-    {
+const event=new eventSchema({
         title:{
             type:String,
             require:true,
@@ -14,13 +13,14 @@ const event=new eventSchema(
             enum:["seminar","competition","workshop"],
         },
         eventDate:Date,
-        describingImg:String,
-
+        Participants:{ 
+            type: mongoose.Schema.Types.ObjectId, 
+            ref: 'User' 
+          },
     },
     {
         timestamps:true
-    }
-)
+    })
 
 const eventModel=mongoose.model("Event",event)
 module.exports=eventModel

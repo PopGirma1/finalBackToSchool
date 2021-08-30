@@ -2,20 +2,19 @@ const mongoose=require('mongoose')
 const hackahatonSchema=mongoose.Schema
 
 const hackhahaton=new hackahatonSchema({
-    RegistrationDeadlineDate:Date,
-    PlaceOfTheHACKATHON:String,
-    DateOfTheHACKATHON:String,
+    RegDeadline:Date,
+    Place:String,
+    Date:String,
     Participants:{ 
         type: mongoose.Schema.Types.ObjectId, 
-        ref: 'User' 
+        ref: 'Visitors' 
       },
-    GroupSize:Number,
+    Size:Number,
     Restrictions:String,
     SpecialOpportunity:String,
-    AvailableServicesForApplicants:String,
+    AvailableServices:String,
     MentorshipDates:String,
     Rewards:String
-
 })
 
 const hackhatonModel=mongoose.model("Hackhaton",hackhahaton)
