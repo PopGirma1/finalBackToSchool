@@ -1,8 +1,17 @@
 const mongoose=require('mongoose')
-const customerSchema=mongoose.Schema;
+const Schema=mongoose.Schema;
 const {isEmail} = require("validator")
 
-const visitor=new customerSchema({
+const eventUser=new Schema({
+    name: String,
+    email:String,
+    phone:String,
+    company:String,
+    Additional_info:String
+    voice:{type:String}
+})
+
+const hackathonUser=new Schema({
     firstName: String,
     lastName: String,
     email: {
@@ -11,16 +20,46 @@ const visitor=new customerSchema({
         unique:true,
         validator:[isEmail,"Please enter valid email"],
     },
-    bussinessSector:{
-        type:String,
-    },
+    phone:String
+    gender:{enum:["Female","Male"]}
+    address:[{
+        "facebook":{
+            type:String,
+            require:true
+        },
+        "telegram":{
+            type:String,
+            require:true
+        },
+        "linkedIn":{
+            type:String,
+            require:true
+        },        
+        "instagram":{
+            type:String,
+        },
+        "twitter":{
+            type:String,
+        }
+    }],
+    educationalProfile:[{
+        Course_of_Study:String,
+        Level:Number,
+        Year_of_Class:Number,
+        Name_of_School:String,
+        Topic_of_Interest:{enum:"Application Development","Data Science","Java Applications"},
+        Prior_knowledge_in_chosen_topic:{enum:"Beginners", "Intermediary","Advanced"},
+        Why_do_you_want_to_participate:String,
+        What_will_you_do_with_the_knowledge_acquired:String.
+        has_personal_labtop:boolean,
+        comment:String
+    }]
 
-    profession:{
-        type:String,
-        default:null,
-    },
-    
 })
 
-const visitorModel=mongoose.model("Visitor",visitor)
-module.exports=visitorModel
+const eventUserModel=mongoose.model("EventUser",eventUser)
+const hackatonUserModel=mongoose.model("HackatonUser",hackathonUser)
+module.exports={
+    eventUserModel,
+    hackatonUserModel
+}

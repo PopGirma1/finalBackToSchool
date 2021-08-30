@@ -5,7 +5,7 @@ const cookieParser=require('cookie-parser')
 
 const adminRouter=require('./routes/adminRouter')
 const eventRouter=require('./routes/eventRouter')
-const visitorRouter=require('./routes/visitorRouter')
+const userRouter=require('./routes/userRouter')
 
 //start the express app
 var app=express()
@@ -30,5 +30,5 @@ app.use(cookieParser())
 app.get('/',(req,res)=>{res.send("home")})
 app.use('/admin',adminRouter)
 app.use('/events',eventRouter)
-app.use('/visitors',visitorRouter)
+app.use('/users',userRouter)
 
