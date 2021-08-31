@@ -54,7 +54,7 @@ export default function AboutCard() {
                 subheader="A.	Back to School Ethiopia Expo                                                             "
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography  component="p">
                     Back to School Ethiopia Expo is a center of excellence where various Higher Education Institutions (local & international)
                     converge for a common goal: to share their unique and exceptional practices with you.
                     This year's campaign, Think It Up! Will bring you dynamic approaches and workshops that will amaze

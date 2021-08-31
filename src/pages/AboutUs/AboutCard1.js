@@ -58,7 +58,7 @@ export default function AboutCard() {
                 subheader="B.Internship & Carrier Expo"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography  component="p">
                     The Internship and Career Fair is our largest recruiting event of the year. Hundreds of undergraduate, graduate students, and alumni form all majors and class years attend in search of internships, job openings, and graduate programs with prospective employers and universities.
                     The friendly and informal character of the event provides a welcome and unique environment for employers, career advisors, education and training providers to communicate directly with jobseekers and students.
                 </Typography>
@@ -83,7 +83,7 @@ export default function AboutCard() {
                             <li> 2019,  Dagmawi Menelik Senior Secondary School, on May 10- 12, 1st Edition.</li>
                             <li> 2022, 2nd Edition, coming soon. </li>
                         </ul>
-                        <Typography variant="h4"> For all of your event success, Contact us, </Typography>
+                        <Typography variant="h6"> For all of your event success, Contact us, </Typography>
                             <Avatar alt="Remy Sharp" src="/asset/img/logo.jpg" className={classes.logo}/>
 
                             <ul>

@@ -58,7 +58,7 @@ export default function AboutCard() {
                 subheader="D. Debtera Ge’ezan Radio Program"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography component="p">
                     The second phase of the radio program shall be on air after three month.
                 </Typography>
             </CardContent>

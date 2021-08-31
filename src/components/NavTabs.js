@@ -1,9 +1,11 @@
-import React from 'react'
+import React ,{Component}from 'react'
 import {AppBar, Button, Grid, Link, List, ListItem, Toolbar, Typography, withStyles} from "@material-ui/core/index";
 import {Redirect} from "react-router-dom";
 import Avatar from 'react-avatar';
+import './Style.css'
 
 const useStyles = ((theme) => ({
+
     root: {
         "& ul": {
             padding: '0px',
@@ -36,8 +38,8 @@ const useStyles = ((theme) => ({
     }
 }));
 
-class NavTabs extends React.Component {
-    onLogoutclicked = () =>{
+class NavTabs extends Component {
+onLogoutclicked = () =>{
         localStorage.clear();
         return <Redirect to='/'/>
     };
@@ -45,6 +47,7 @@ class NavTabs extends React.Component {
     isAuthnticated = () => {
         if(this.props.getToken()){
             return (
+
                 <List>
                     <ListItem><Button  href={process.env.PUBLIC_URL + '/'}>Home</Button> </ListItem>
                     <ListItem><Button  href={process.env.PUBLIC_URL + '/SideEvents'}>SideEvents</Button></ListItem>
@@ -63,7 +66,16 @@ class NavTabs extends React.Component {
                     <ListItem><Button  href={process.env.PUBLIC_URL + '/About'}>About</Button></ListItem>
                     <ListItem><Button  href={process.env.PUBLIC_URL + '/Contact'}>Contact</Button></ListItem>
                     <ListItem><Button  href={process.env.PUBLIC_URL + '/Exhibitor'}>Exhibitors</Button></ListItem>
-                    <ListItem><Button  href={process.env.PUBLIC_URL + '/Hackhaton'}>Hackhaton</Button></ListItem>
+
+                    <ListItem>
+                        <div className="dropdown">
+                            <button className="dropbtn">Hackhaton</button>
+                            <div className="dropdown-content" >
+                                <a href={process.env.PUBLIC_URL + '/Hackhaton'}>About</a>
+                                <a href={process.env.PUBLIC_URL + '/Hackhaton'}>Apply</a>
+                            </div>
+                        </div>
+                    </ListItem>
                     <ListItem><Button  href={process.env.PUBLIC_URL + '/TestimonialAndGallery'}>Testimonials And Gallery</Button></ListItem>
                 </List>
             )

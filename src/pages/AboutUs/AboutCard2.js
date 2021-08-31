@@ -58,7 +58,8 @@ export default function AboutCard() {
                 subheader="C. Recruitment and Training Service Delivered"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography  component="p">
+                    {/*//variant="body2" color="textSecondary"*/}
                     <ol>
                         <li> Debredamo International Hotel, on January 2019.</li>
                         <li> Kuriftu Resort, on April 2018 & March 2019. </li>

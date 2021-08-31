@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Apply from './Apply'
 import Apply1 from "./Apply1";
 import About from './About'
+import YearOfClass from './YearOfClass'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,11 +41,8 @@ function Hackhaton() {
                     <div className={classes.anmation}>
                         <About></About>
                     </div>
-                    <div className={classes.anmation}>
-                        <div>
+                    <div className={classes.anmation} id="Apply">
                             <Apply></Apply>
-                        </div>
-
                     </div>
                 </AwesomeSlider>
             </div>

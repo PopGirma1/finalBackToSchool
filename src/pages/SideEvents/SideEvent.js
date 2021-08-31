@@ -28,10 +28,6 @@ const useStyles = (theme) => ({
     },
     register:{
         borderRadius:'12px'
-    },
-    Entertainments:{
-        color:'green',
-        fontsize:'12px'
     }
     ,
     btn:{
@@ -84,8 +80,8 @@ class SideEvent extends Component{
                 <Card1></Card1>
                 <Card><CardContent>
                     <Typography variant="h5">Entertainments</Typography>
-                    <Typography variant="h5">
-                        <ul style={{  lineHeight: "1.5" }} className={classes.Entertainments}>
+                    <Typography>
+                        <ul className={classes.Entertainments}>
                             Although we take our job seriously, Fun is a part of life and hear are some Ethiopian style.
                             <li>Talent Show Performance</li>
                             <li>Heath & Yoga Sessions</li>

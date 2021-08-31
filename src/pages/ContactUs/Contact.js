@@ -20,6 +20,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LottieAnimation from "./lotiContact";
 import lotiContact from "./contactus2.json";
+import Country from "./Country";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -46,6 +47,9 @@ const useStyles = makeStyles((theme) => ({
 
     main:{
         margin:'-12px'
+    },
+    country:{
+        marginTop:'15px',
     }
 }));
 
@@ -78,10 +82,12 @@ function Contact(props) {
                 <InputLabel htmlFor="my-input">Company</InputLabel>
                 <Input id="my-input" type={"text"} aria-describedby="my-helper-text" />
                 </FormControl>
-                <FormControl>
-                <InputLabel htmlFor="my-input">Country</InputLabel>
-                <Input id="my-input" type={"text"} aria-describedby="my-helper-text" />
+                <FormControl className={classes.country}>
+
+                <Country></Country>
+
                 </FormControl>
+
             </CardContent>
                 <Button variant="contained" color="primary" href="#contained-buttons" className="btn">Subimit</Button>
             </Card>

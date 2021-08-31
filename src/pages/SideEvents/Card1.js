@@ -53,7 +53,7 @@ export default function AboutCard() {
                 title="Webinars/Workshops/Conferences"
             />
             <CardContent>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography  component="p">
                     The core values in attending workshops, onsite & virtual, are the following,
                     informative, inspiring, educational, & entertaining.
                     In accord, we bring home latest happenings, global AI practices,
