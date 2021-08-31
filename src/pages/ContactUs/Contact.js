@@ -21,7 +21,8 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import LottieAnimation from "./lotiContact";
 import lotiContact from "./contactus2.json";
 import Country from "./Country";
-
+import TelegramIcon from "@material-ui/icons/Telegram";
+import './Contact.css'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -50,7 +51,11 @@ const useStyles = makeStyles((theme) => ({
     },
     country:{
         marginTop:'15px',
+    },
+    btn:{
+        margin:'5px'
     }
+
 }));
 
 
@@ -58,7 +63,7 @@ function Contact(props) {
     const classes = useStyles();
     return (
         <div>
-            <div>
+            <div className="papa">
                 <LottieAnimation lotti={lotiContact} height={300} width={400} />
             </div>
         <div className={classes.root}>
@@ -146,10 +151,20 @@ function Contact(props) {
                         <Card><CardContent>
                             <Typography>Follow us on: </Typography>
                             <FacebookIcon color="primary"></FacebookIcon>
-                            <YouTubeIcon color="primary"></YouTubeIcon>
+                            <Button variant="contained" color="primary" className={classes.btn}> <td onClick={()=> window.open("http://hackathon.backtoschoolethiopia.org/", "_blank")}>Facebook</td></Button>
+                            <TelegramIcon color="primary"></TelegramIcon>
+
+                            <Button variant="contained" color="primary" className={classes.btn}> <td onClick={()=> window.open("http://hackathon.backtoschoolethiopia.org/", "_blank")}>Telegram</td></Button>
                             <LinkedInIcon color="primary"></LinkedInIcon>
+
+                            <Button variant="contained" color="primary" className={classes.btn}> <td onClick={()=> window.open("http://hackathon.backtoschoolethiopia.org/", "_blank")}>LinkedIn</td></Button>
                             <TwitterIcon color="primary"></TwitterIcon>
+
+                            <Button variant="contained" color="primary" className={classes.btn}> <td onClick={()=> window.open("http://hackathon.backtoschoolethiopia.org/", "_blank")}>Twitter</td></Button>
                             <InstagramIcon color="primary"></InstagramIcon>
+
+                            <Button variant="contained" color="primary" className={classes.btn}> <td onClick={()=> window.open("http://hackathon.backtoschoolethiopia.org/", "_blank")}>Instagram</td></Button>
+
                         </CardContent></Card>
 
                     </CardContent></Card>

@@ -37,7 +37,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function AboutCard() {
+export default function AboutCard2() {
     const classes = useStyles();
     const [expanded, setExpanded] = React.useState(false);
 

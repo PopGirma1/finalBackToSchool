@@ -1,8 +1,10 @@
 import React from 'react';
-
+import Register from "./Register";
 function Exhibitor(props) {
     return (
-        <div> this is Exhibitors page</div>
+        <div>
+            <Register></Register>
+        </div>
     );
 }
 

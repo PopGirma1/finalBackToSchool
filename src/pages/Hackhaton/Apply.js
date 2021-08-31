@@ -107,7 +107,7 @@ export default function Apply() {
                     Internet Connection
 
                 </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
+                <Typography component="p">
 
                     Mentorship Dates for applicants:
                     Session 1: February 17 - 18/2022, for students based in Addis Ababa
@@ -131,7 +131,7 @@ export default function Apply() {
             <Collapse in={expanded} timeout="auto" unmountOnExit>
                 <CardContent>
                     <Typography paragraph>
-                        <Typography variant="h5">Rewards:</Typography>
+                        <Typography variant="h6">Rewards:</Typography>
 
                         In cash & in kind, optional
                         Laptop, optional
@@ -143,7 +143,7 @@ export default function Apply() {
                     </Typography>
                     <Typography paragraph>
                         Competition finalist to be officially announced on the closing date of the event, January 18, 2022.                     </Typography>
-                    <Typography variant="h4">REGISTER NOW!</Typography>
+                    <Typography variant="h6">REGISTER NOW!</Typography>
                     <Typography>
                         Registration Form Information’s
                         <ul>

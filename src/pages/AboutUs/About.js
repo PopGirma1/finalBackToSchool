@@ -12,6 +12,7 @@ import AboutCard2 from "./AboutCard2";
 import AboutCard3 from "./AboutCard3";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
+import './Style/Style.css'
 const useStyles = (theme) => ({
 
     bounce: {
@@ -87,7 +88,7 @@ class About extends Component {
 
                     <div style={{ background: "#eee" }}>
                         <div  style={{ margin: "1em " }}>
-                            <Card> <CardContent>
+                            <Card className="papa"> <CardContent>
                                 <Typography variant="h5">  OVERVIWE:</Typography>
                                 <Typography variant="h6" style={{  lineHeight: "1.5" }} className={classes.paragraphStyling}>
                                     Noosphere Affairs Trading Plc. is established with the vision of contributing to the national efforts of making an empowered and productive generation that strives to contribute to the continuous betterment of livelihoods.
