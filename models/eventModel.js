@@ -13,6 +13,7 @@ const event=new eventSchema({
             enum:["seminar","competition","workshop"],
         },
         eventDate:Date,
+        discribingImage:String,
         participants: [
             { type: mongoose.Schema.Types.ObjectId, ref: 'EventUser' }
           ]
