@@ -98,7 +98,6 @@ body {
   background: #fff;
   transition: all 0.5s;
   z-index: 997;
-  height: 86px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -120,11 +119,11 @@ body {
 }
 
 /*navbar*/
-.navbar {
+.navbar .collapse {
   padding: 0;
 }
 
-.navbar ul {
+.navbar .collapse ul {
   margin: 0;
   padding: 0;
   display: flex;
@@ -132,17 +131,17 @@ body {
   align-items: center;
 }
 
-.navbar li {
+.navbar .collapse li {
   position: relative;
 }
 
-.navbar > ul > li {
+.navbar .collapse > ul > li {
   white-space: nowrap;
-  padding: 10px 0 10px 28px;
+  padding: 10px 0 10px 20px;
 }
 
-.navbar a,
-.navbar a:focus {
+.navbar .collapse a,
+.navbar .collapse a:focus {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -155,14 +154,14 @@ body {
   position: relative;
 }
 
-.navbar a i,
-.navbar a:focus i {
+.navbar .collapse a i,
+.navbar .collapse a:focus i {
   font-size: 12px;
   line-height: 0;
   margin-left: 5px;
 }
 
-.navbar > ul > li > a:before {
+.navbar .collapse > ul > li > a:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -175,202 +174,44 @@ body {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.navbar a:hover:before,
-.navbar li:hover > a:before,
-.navbar .active:before {
+.navbar .collapse a:hover:before,
+.navbar .collapse li:hover > a:before,
+.navbar .collapse .active:before {
   visibility: visible;
   width: 100%;
 }
 
-.navbar a:hover,
-.navbar .active,
-.navbar .active:focus,
-.navbar li:hover > a {
+.navbar .collapse a:hover,
+.navbar .collapse .active,
+.navbar .collapse .active:focus,
+.navbar .collapse li:hover > a {
   color: var(--primary-green);
 }
-
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 28px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-}
-
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar .dropdown ul a {
-  padding: 10px 20px;
-  font-weight: 400;
-}
-
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
-  color: var(--primary-green);
-}
-
-.navbar .dropdown:hover > ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-
-.navbar .dropdown .dropdown:hover > ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
-
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
-  }
-  .navbar .dropdown .dropdown:hover > ul {
-    left: -100%;
-  }
-}
-
-/*
-mobile-navbar
-*/
-.mobile-nav-toggle {
-  color: #222222;
-  font-size: 28px;
-  cursor: pointer;
-  display: none;
-  line-height: 0;
-  transition: 0.5s;
-}
-
-.mobile-nav-toggle.bi-x {
-  color: #fff;
-}
-
-@media (max-width: 991px) {
-  .mobile-nav-toggle {
-    display: block;
-  }
+@media (max-width: 768px) {
   .navbar ul {
-    display: none;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
   }
-}
-
-.navbar-mobile {
-  position: fixed;
-  overflow: hidden;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  background: rgba(9, 9, 9, 0.9);
-  transition: 0.3s;
-  z-index: 999;
-}
-
-.navbar-mobile .mobile-nav-toggle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-}
-
-.navbar-mobile ul {
-  display: block;
-  position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
-  padding: 10px 0;
-  background-color: #fff;
-  overflow-y: auto;
-  transition: 0.3s;
-}
-
-.navbar-mobile a {
-  padding: 10px 20px;
-  font-size: 15px;
-  color: #222222;
-}
-
-.navbar-mobile > ul > li {
-  padding: 0;
-}
-
-.navbar-mobile a:hover:before,
-.navbar-mobile li:hover > a:before,
-.navbar-mobile .active:before {
-  visibility: hidden;
-}
-
-.navbar-mobile a:hover,
-.navbar-mobile .active,
-.navbar-mobile li:hover > a {
-  color: var(--primary-green);
-}
-
-.navbar-mobile .getstarted {
-  margin: 15px;
-}
-
-.navbar-mobile .dropdown ul {
-  position: static;
-  display: none;
-  margin: 10px 20px;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 1;
-  visibility: visible;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-}
-
-.navbar-mobile .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar-mobile .dropdown ul a {
-  padding: 10px 20px;
-}
-
-.navbar-mobile .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar-mobile .dropdown ul a:hover,
-.navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover > a {
-  color: var(--primary-green);
-}
-
-.navbar-mobile .dropdown > .dropdown-active {
-  display: block;
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+  .navbar ul li {
+    white-space: nowrap;
+    padding: 10px 0 10px 10px;
+    position: relative;
+  }
+  .navbar ul li a {
+    width: 100%;
+    left: 0;
+    transition: all 0.3s ease-in-out 0s;
+  }
 }
 /*Hero Style*/
 #hero {
   width: 100%;
   height: 80vh;
-  /*background: url("../../../../../public/assets/images/ethstuimage1.jpg");*/
+  background: url("../images/ethstuimage1.jpg");
   background-size: 100%;
   background-size: cover;
   position: relative;
@@ -515,29 +356,6 @@ mobile-navbar
 #footer .footer-top #logo img {
   height: 100px;
 }
-#footer .footer-top .footer-register {
-  margin-bottom: 30px;
-}
-
-#footer .footer-top .footer-register h3 {
-  font-size: 24px;
-  margin: 0 0 15px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
-}
-
-#footer .footer-top .footer-register h3 span {
-  color: var(--primary-green) !important;
-}
-
-#footer .footer-top .footer-register p {
-  font-size: 14px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: "Roboto", sans-serif;
-  color: #777777;
-}
 
 #footer .footer-top h4 {
   font-size: 16px;
@@ -638,14 +456,12 @@ mobile-navbar
   letter-spacing: 1px;
   padding: 8px 20px;
   margin: 0;
-  background: #e7f1fd;
-  color: var(--primary-green);
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
 }
 .parteners .partenersName p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
@@ -732,7 +548,7 @@ mobile-navbar
 /*register*/
 
 .register .register-form {
-  box-shadow: 0 0 30px rgba(214, 215, 216, 0.4);
+  /* box-shadow: 0 0 30px rgba(214, 215, 216, 0.4); */
   padding: 30px;
 }
 

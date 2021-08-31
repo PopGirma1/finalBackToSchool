@@ -1,11 +1,11 @@
-import React from 'react';
-import HomePage from "./HomePage";
+import React from "react";
+import HomePage from "../Home/home/homePage";
 
 function index(props) {
-    return (
-        <div>
-            <HomePage></HomePage>
-        </div>
-    );
+  return (
+    <div>
+      <HomePage />
+    </div>
+  );
 }
 export default index;
