@@ -1,9 +1,26 @@
 const Event = require('../models/eventModel')
+const multer = require('multer');
 
+// define storage for images
+const storage = multer.diskStorage({
+    destination:function(request,file,callback){
+        callback(null,'./public/Uploads/images')
+    },
+    //add back extension
+    filename:function(request,file,callback){
+        callback(null,Date.now()+file.originalname)
+    }
+    
+
+})
+// const upload = multer({ storage });
+// uploading parameter 4 multer
+const upload =multer({storage}).single("image")
 const postEvent=async (req,res)=>{
     const {title,type,participants}=req.body
+    const describingImage=req.file.filename
     try{
-        const event=await Event.create({title,type,participants})
+        const event=await Event.create({title,type,describingImage})
         if(event){
             res.status(200).json(event)
         }
@@ -46,9 +63,8 @@ const getEventById=async (req,res)=>{
         res.status(200).json(event)
     }
 }
-const deleteEvent=(req,res)=>{
-
-}
+const updateEvent=(re,res)=>{}
+const deleteEvent=(req,res)=>{}
 
 module.exports={
     postEvent,
@@ -56,5 +72,7 @@ module.exports={
     searchEventByName,
     searchEventByDate,
     getAllEvents,
+    upload,
+    updateEvent,
     deleteEvent,
 }

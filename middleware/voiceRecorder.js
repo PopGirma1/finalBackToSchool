@@ -2,7 +2,7 @@ const multer=require('multer')
 const mongoose=require('mongoose')
 
 const storage = multer.memoryStorage()
-const upload = multer({
+const voiceUploader = multer({
     storage: storage,
     limits: {
         fields: 1, 
@@ -11,7 +11,7 @@ const upload = multer({
         parts: 2 
     }
 });
-upload.single('track')(req, res, (err) => {
+voiceUploader.single('track')(req, res, (err) => {
     if (err) {
       return res.status(400).json({ message: "Upload Request Validation Failed" });
     } else if(!req.body.name) {
@@ -41,4 +41,4 @@ upload.single('track')(req, res, (err) => {
     });
   });
 
-  module.exports=upload
+  module.exports=voiceUploader

@@ -13,7 +13,7 @@ const registerForEventViaInfo=async (req,res)=>{
     }catch(error) {console.log("Errrorrrr::",error)}
 }
 
-const registerForEventViaVoice=(req,res)=>{
+const registerForEventViaVoice=async (req,res)=>{
     const event=await Event.findById(req.params.event)
     const registerd_for_event=event._id
     const {voice}=req.body

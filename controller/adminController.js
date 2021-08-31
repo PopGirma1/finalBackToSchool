@@ -41,30 +41,16 @@ const adminLogIn=async (req,res)=>{
     }catch(err){console.log(err)} 
 }
 
-const newEvent=async (req,res)=>{
-    const {title,type,eventDate}=req.body
-    try {
-        await event.create({title,type,eventDate})
-    } catch (error) {
-        res.status(500).json({message:error})
-    }
-}
-
 const adminLogOut=async (req,res)=>{
     res.cookie('jwt','empty-key',{maxAge:1})
     res.status(400).json("Successfully logged out")
 }
 
-const newHackathon=(req,res)=>{
-
-}
-
-
+const newHackathon=(req,res)=>{}
 
 module.exports={
     createAccount,
     adminLogIn,
-    newEvent,
     newHackathon,
     adminLogOut,
 }
