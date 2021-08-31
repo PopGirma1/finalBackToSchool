@@ -13,10 +13,9 @@ const event=new eventSchema({
             enum:["seminar","competition","workshop"],
         },
         eventDate:Date,
-        Participants:{ 
-            type: mongoose.Schema.Types.ObjectId, 
-            ref: 'User' 
-          },
+        participants: [
+            { type: mongoose.Schema.Types.ObjectId, ref: 'EventUser' }
+          ]
     },
     {
         timestamps:true

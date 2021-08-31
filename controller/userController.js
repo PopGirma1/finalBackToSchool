@@ -1,22 +1,28 @@
-const Customer = require('../models/userModel')
 const Event = require('../models/eventModel')
+const EventUser=require('../models/userModel')
 
+const registerForEventViaInfo=async (req,res)=>{
+    //specify for which event is the user going to be registered
+    const event=await Event.findById(req.params.event)
+    const registerd_for_event=event._id
+    const {name,email,phone,company,Additional_info}=req.body
+    try { 
+        const user=await EventUser.create({name,email,phone,company,Additional_info,registerd_for_event})
+        await event.participants.push(user._id)  
+        await event.save()
+        console.log("The Event is::::::::::",event)
+        console.log("The user is:::::::::",user)
+    }catch(error) {console.log("Errrorrrr::",error)}
+}
+const registerForEventViaVoice=(req,res)=>{
 
+}
 const registerForHackaton=async (req,res)=>{
     const {FirstName,LastName,TelMob,Email,Gender,facebookLink,telegramLink,linkedInLink,twitterLink,instagrameLink,course,level,year,school,topic,currentStatus,whyInetested,futureVision,hasLabtop}=req.body
 }
-const registerFor=async (req,res)=>{}
-
-const getAllVisitors=(req,res)=>{
-    const customers=Customer.find()
-    if(customers){
-        res.status(200).json(customers)
-    }else{
-        res.status(403).json("Bad Request")
-    }
-}
 
 module.exports={
+    registerForEventViaInfo,
+    registerForEventViaVoice,
     registerForHackaton,
-    getAllVisitors
 }

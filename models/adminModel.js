@@ -30,5 +30,5 @@ admin.statics.login =async function(email,password){
     }
     throw Error("Incorrect email")
 }
-const adminModel=mongoose.model("User",admin)
+const adminModel=mongoose.model("Admin",admin)
 module.exports=adminModel

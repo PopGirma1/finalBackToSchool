@@ -7,8 +7,12 @@ const eventUser=new Schema({
     email:String,
     phone:String,
     company:String,
-    Additional_info:String
-    voice:{type:String}
+    Additional_info:String,
+    voice:{type:String},
+    registerd_for_event:{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Events' 
+    }
 })
 
 const hackathonUser=new Schema({
@@ -20,8 +24,11 @@ const hackathonUser=new Schema({
         unique:true,
         validator:[isEmail,"Please enter valid email"],
     },
-    phone:String
-    gender:{enum:["Female","Male"]}
+    phone:String,
+    gender:{
+        type:String,
+        enum:["Female","Male"]
+    },
     address:[{
         "facebook":{
             type:String,
@@ -47,19 +54,20 @@ const hackathonUser=new Schema({
         Level:Number,
         Year_of_Class:Number,
         Name_of_School:String,
-        Topic_of_Interest:{enum:"Application Development","Data Science","Java Applications"},
-        Prior_knowledge_in_chosen_topic:{enum:"Beginners", "Intermediary","Advanced"},
+        Topic_of_Interest:{type:String,enum:["Application Development","Data Science","Java Applications"]},
+        Prior_knowledge_in_chosen_topic:{type:String,enum:["Beginners", "Intermediary","Advanced"]},
         Why_do_you_want_to_participate:String,
-        What_will_you_do_with_the_knowledge_acquired:String.
-        has_personal_labtop:boolean,
+        What_will_you_do_with_the_knowledge_acquired:String,
+        has_personal_labtop:Boolean,
         comment:String
-    }]
+    }],
+    registerd_for_hackathon:{
+        type: mongoose.Schema.Types.ObjectId, 
+        ref: 'Hackathons' 
+    }
 
 })
 
-const eventUserModel=mongoose.model("EventUser",eventUser)
-const hackatonUserModel=mongoose.model("HackatonUser",hackathonUser)
-module.exports={
-    eventUserModel,
-    hackatonUserModel
-}
+module.exports =mongoose.model("EventUser",eventUser);
+// module.exports =mongoose.model("HackathonUser",hackathonUser);
+

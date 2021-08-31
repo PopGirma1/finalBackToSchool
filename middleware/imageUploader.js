@@ -12,7 +12,7 @@ const storage = multer.diskStorage({
 })
 
 //uploading parameter 4 multer
-const upload =multer({
+const imageUploader =multer({
     storage:storage,
     limits:{
         fieldSize:1024 * 1024 *6
@@ -20,4 +20,4 @@ const upload =multer({
 
 }).single("image")
 
-module.exports={upload}
+module.exports={imageUploader}

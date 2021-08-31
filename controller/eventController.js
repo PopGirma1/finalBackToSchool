@@ -1,9 +1,9 @@
 const Event = require('../models/eventModel')
 
 const postEvent=async (req,res)=>{
-    const {title,type,eventDate}=req.body
+    const {title,type,participants}=req.body
     try{
-        const event=await Event.create({title,type,eventDate})
+        const event=await Event.create({title,type,participants})
         if(event){
             res.status(200).json(event)
         }
@@ -40,26 +40,19 @@ const getAllEvents=(req,res)=>{
         res.status(400).json(err)
     })
 }
-// const updateEvent=(req,res)=>{
-//     const eventData=req.body
-//     const filter= { name: userData.name };
-//     try{
-//         const user=await User.authUpdate(userData.email,userData.password)
-//         if(user){
-//             await User.findOneAndUpdate(filter,userData,{new:true})
-//                     .then((result) => {
-//                         res.status(204).send(result); 
-//                         console.log("User profile update!")
-//                     });
-//         }
-//     }catch(err){console.log(err)}
-// }
+const getEventById=async (req,res)=>{
+    const event=await Event.findById(req.params.id)
+    if(event){
+        res.status(200).json(event)
+    }
+}
 const deleteEvent=(req,res)=>{
 
 }
 
 module.exports={
     postEvent,
+    getEventById,
     searchEventByName,
     searchEventByDate,
     getAllEvents,
