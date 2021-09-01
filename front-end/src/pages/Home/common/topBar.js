@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import LottieAnimation from "../../ContactUs/lotiContact";
+import lotiContact from "../../ContactUs/contactus1.json";
 
 export default class TopBar extends Component {
   render() {
@@ -14,6 +16,10 @@ export default class TopBar extends Component {
             </i>
             <i className="bi bi-telephone d-flex align-items-center ms-4">
               <span>+251-974 082036</span>
+            </i>
+
+            <i className="bi bi-telephone d-flex align-items-center ms-4">
+              <span><LottieAnimation lotti={lotiContact} height={60} width={120} /></span>
             </i>
           </div>
           <div className="social-links d-none d-md-flex align-items-center">

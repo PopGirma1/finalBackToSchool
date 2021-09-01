@@ -54,6 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
   btn: {
     margin: "5px",
+    height:'20px',
   },
 }));
 
