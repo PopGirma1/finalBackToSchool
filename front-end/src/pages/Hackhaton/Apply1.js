@@ -18,6 +18,7 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import Reason from './Reason'
+import Reason1 from "./Reason1";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -67,13 +68,15 @@ function Apply1(props) {
                     </FormControl>
 
                     <YearOfClass></YearOfClass>
+
                     <Level></Level>
 
                     <TopicOfInterest></TopicOfInterest>
+
                     <Knowledge></Knowledge>
-                    <Typography style={{marginTop:'30px',marginLeft:'-500px',marginBottom:'20px'}}>Why do you want to participate?</Typography>
-                    <Reason></Reason>
-                    <Typography style={{marginLeft:'-400px',marginBottom:'40px',marginTop:'-30px'}}>  What will you do with the knowledge acquired?</Typography>
+
+                    <Reason1></Reason1>
+
                     <Reason></Reason>
                     <FormControl component="fieldset">
                         <FormLabel component="legend" style={{marginLeft:'-260px'}}><Typography>  Do you have a personal laptop?</Typography></FormLabel>

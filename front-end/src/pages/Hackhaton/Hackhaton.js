@@ -2,14 +2,9 @@ import React from 'react';
 import {makeStyles} from "@material-ui/core/styles";
 import AwesomeSlider from 'react-awesome-slider';
 import 'react-awesome-slider/dist/styles.css';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
 import Apply from './Apply'
 import Apply1 from "./Apply1";
 import About from './About'
-import YearOfClass from './YearOfClass'
-
 const useStyles = makeStyles((theme) => ({
     root: {
         display: "flex",

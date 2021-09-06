@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-export default function Reason() {
+export default function Reason1() {
     const classes = useStyles();
     const [value, setValue] = React.useState('');
 
@@ -21,20 +21,20 @@ export default function Reason() {
     };
 
     return (
-            <div style={{marginBottom:'20px'}} className={classes.root}>
-                <form  noValidate autoComplete="on">
+        <div style={{marginBottom:'20px'}} className={classes.root}>
+            <form  noValidate autoComplete="on">
 
                 <br />
                 <TextField className={classes.place}
-                    id="filled-multiline-flexible"
-                    label="What will you do with the knowledge acquired?"
-                    multiline
-                    maxRows={10}
-                    value={value}
-                    onChange={handleChange}
-                    variant="filled"
+                           id="filled-multiline-flexible"
+                           label="why do you want to participate?"
+                           multiline
+                           maxRows={10}
+                           value={value}
+                           onChange={handleChange}
+                           variant="filled"
                 />
-                </form>
-            </div>
+            </form>
+        </div>
     );
 }

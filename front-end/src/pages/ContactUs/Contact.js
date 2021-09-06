@@ -2,19 +2,15 @@ import React from "react";
 import { FormControl } from "@material-ui/core";
 import Input from "@material-ui/core/Input";
 import InputLabel from "@material-ui/core/InputLabel";
-import FormHelperText from "@material-ui/core/FormHelperText";
 import Typography from "@material-ui/core/Typography";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import Button from "@material-ui/core/Button";
 import "./Contact.css";
 import { makeStyles } from "@material-ui/core/styles";
-import { red } from "@material-ui/core/colors";
 import ContactCard from "./ContactCard";
 import Link from "@material-ui/core/Link";
-import Icon from "@material-ui/core/Icon";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import YouTubeIcon from "@material-ui/icons/YouTube";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -170,100 +166,19 @@ function Contact(props) {
                   <Card>
                     <CardContent>
                       <Typography>Follow us on: </Typography>
+
                       <FacebookIcon color="primary"></FacebookIcon>
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.btn}
-                      >
-                        {" "}
-                        <td
-                          onClick={() =>
-                            window.open(
-                              "http://hackathon.backtoschoolethiopia.org/",
-                              "_blank"
-                            )
-                          }
-                        >
-                          Facebook
-                        </td>
-                      </Button>
+
                       <TelegramIcon color="primary"></TelegramIcon>
 
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.btn}
-                      >
-                        {" "}
-                        <td
-                          onClick={() =>
-                            window.open(
-                              "http://hackathon.backtoschoolethiopia.org/",
-                              "_blank"
-                            )
-                          }
-                        >
-                          Telegram
-                        </td>
-                      </Button>
+
                       <LinkedInIcon color="primary"></LinkedInIcon>
 
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.btn}
-                      >
-                        {" "}
-                        <td
-                          onClick={() =>
-                            window.open(
-                              "http://hackathon.backtoschoolethiopia.org/",
-                              "_blank"
-                            )
-                          }
-                        >
-                          LinkedIn
-                        </td>
-                      </Button>
                       <TwitterIcon color="primary"></TwitterIcon>
 
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.btn}
-                      >
-                        {" "}
-                        <td
-                          onClick={() =>
-                            window.open(
-                              "http://hackathon.backtoschoolethiopia.org/",
-                              "_blank"
-                            )
-                          }
-                        >
-                          Twitter
-                        </td>
-                      </Button>
+
                       <InstagramIcon color="primary"></InstagramIcon>
 
-                      <Button
-                        variant="contained"
-                        color="primary"
-                        className={classes.btn}
-                      >
-                        {" "}
-                        <td
-                          onClick={() =>
-                            window.open(
-                              "http://hackathon.backtoschoolethiopia.org/",
-                              "_blank"
-                            )
-                          }
-                        >
-                          Instagram
-                        </td>
-                      </Button>
                     </CardContent>
                   </Card>
                 </CardContent>
