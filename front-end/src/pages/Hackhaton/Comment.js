@@ -5,10 +5,7 @@ import CommentIcon from "@material-ui/icons/Comment";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        '& .MuiTextField-root': {
-            margin: theme.spacing(1),
-            width: '25ch',
-        },
+
     },
 }));
 
@@ -22,9 +19,9 @@ export default function Comment() {
 
     return (
         <form className={classes.root} noValidate autoComplete="off">
-    <div style={{marginLeft:'-500px'}}>
-        <CommentIcon></CommentIcon>
-                <TextField style={{width:'300px'}}
+    <div >
+
+                <TextField style={{width:'870px'}}
                     id="filled-multiline-flexible"
                     label="Fill Free to Give A comment "
                     multiline

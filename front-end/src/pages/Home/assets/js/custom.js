@@ -18,6 +18,7 @@ import AOS from "aos/dist/aos";
     });
   });
   let navbarlinks = select("#navbar ", true);
+
   const navbarlinksActive = () => {
     let position = window.scrollY + 200;
     navbarlinks.forEach((navbarlink) => {

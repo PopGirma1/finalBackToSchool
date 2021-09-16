@@ -1,8 +1,18 @@
 import React from "react";
 import logo from "../assets/images/backtoschollogo.png";
+
+const useStyles = (theme) => ({
+  foo:{
+    marginTop:'40px'
+  }
+});
+
+
 export const Footer = () => {
+
+  const  classes=useStyles();
   return (
-    <footer id="footer">
+    <footer id="footer" className={classes.foo}>
       <div className="footer-top">
         <div className="container">
           <div className="row">

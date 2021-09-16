@@ -2,7 +2,7 @@ import React from 'react';
 import CardContent from '@material-ui/core/CardContent';
 import Card from '@material-ui/core/Card';
 import Typography from '@material-ui/core/Typography';
-import {makeStyles} from "@material-ui/core/styles";
+import {makeStyles, withStyles} from "@material-ui/core/styles";
 import {FormControl} from "@material-ui/core";
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
@@ -19,9 +19,11 @@ import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormLabel from '@material-ui/core/FormLabel';
 import Reason from './Reason'
 import Reason1 from "./Reason1";
+import PersonalLaptop from './PersonalLaptop'
+import backEndApi from "../../services/api";
 
 
-const useStyles = makeStyles((theme) => ({
+const styles = theme => ({
     root: {
         display: "flex",
         flexDirection: "column",
@@ -35,76 +37,247 @@ const useStyles = makeStyles((theme) => ({
     contact1:{
         padding:'90px'
     }
-}));
+});
+
+class Apply1 extends React.Component {
 
 
-function Apply1(props) {
-    const classes=useStyles();
-    return (
-        <div className={classes.root}>
-        <Card className={classes.apply}><CardContent>
-            <Typography variant="h5">  3rd Party representative: </Typography>
-            <form>
-                <Card className={classes.contact1}><CardContent className="frmctl">
-                    <FormControl>
-                        <InputLabel htmlFor="my-input"> Full Name</InputLabel>
-                        <Input id="my-input" type={"text"} aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl>
-                        <InputLabel htmlFor="my-input">Email address</InputLabel>
-                        <Input id="my-input" type={"email"} aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl>
-                        <InputLabel htmlFor="my-input">Phone Number</InputLabel>
-                        <Input id="my-input" type={"number"} aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl>
-                        <InputLabel htmlFor="my-input">Title</InputLabel>
-                        <Input id="my-input" type={"text"} aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl>
-                        <InputLabel htmlFor="my-input">Name of School</InputLabel>
-                        <Input id="my-input" type={"text"} aria-describedby="my-helper-text" />
-                    </FormControl>
+    constructor(props) {
+        super(props);
+        this.state = {
+            name: '',
+            email: '',
+            phoneNumber:'',
+            tittle: '',
+            NameofTheSchool:'',
+            errorMessage: '',
+            successMessage: '',
+        }
 
-                    <YearOfClass></YearOfClass>
+    }
 
-                    <Level></Level>
+    handleOtherSubmit(e){
 
-                    <TopicOfInterest></TopicOfInterest>
+        if(e.target.event.value ==''){
 
-                    <Knowledge></Knowledge>
+            this.setState({
+                successMessage: 'successful information.'
+            });
+        }
+        else {
+            this.setState({
+                errorMessage: "Please fill all the inputs correctly."
+            });
+        }
+    }
 
-                    <Reason1></Reason1>
+    handleSubmit(e){
+        e.preventDefault();
+        this.validateInput();
+    }
 
-                    <Reason></Reason>
-                    <FormControl component="fieldset">
-                        <FormLabel component="legend" style={{marginLeft:'-260px'}}><Typography>  Do you have a personal laptop?</Typography></FormLabel>
-                        <Typography style={{marginLeft:'-460px'}}> Caveat: Personal laptop recommended</Typography>
-                        <RadioGroup aria-label="Do you have a personal laptop?" name="option" value={'value'} onChange={'handleChange'}>
-                            <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
-                            <FormControlLabel value="No" control={<Radio />} label="No" />
-                        </RadioGroup>
-                        </FormControl>
+    // get the api
+    applyApiRequest = async (apply) => {
+        const {data} = await backEndApi.post('/apply', apply);
+        this.setState({
+            errorMessage: '',
+            successMessage: 'You have successfully  sent an apply  information. thank you '
+        });
+    };
 
-                     <Comment></Comment>
-                    <div>
-                        <Typography>Please share the message to friends.</Typography>
-                        <ShareIcon></ShareIcon>
-                    </div>
+    // validate correct input values
 
-                    <Typography>Melkam Edele/GOOD LUCK!</Typography>
+    validateInput = () => {
+        const UserApply = {
+            name: this.state.name,
+            email: this.state.email,
+            payerPhone: this.state.phoneNumber,
+            tittle: this.tittle,
+            NameofTheSchool: this.NameofTheSchool,
+        };
 
-                </CardContent>
-                    <Button variant="contained" color="primary" href="#contained-buttons" className="btn">Subimit</Button>
+        var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-                </Card>
+        var nameFormat=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/;
 
-            </form>
-        </CardContent></Card>
+        var pattern = new RegExp(/^[0-9\b]+$/);
 
-        </div>
-    );
+        if (this.state.name && this.state.email && this.state.phoneNumber && this.state.tittle && this.state.NameofTheSchool) {
+            if (!nameFormat.test(this.state.name)) {
+                this.setState({errorMessage: "The name that you have entered is incorrect."})
+            }
+
+            else if (!mailformat.test(this.state.email)) {
+
+                this.setState({errorMessage: "The email that you have provided is invalid."})
+
+            }
+
+            else if (!pattern.test(this.state.phoneNumber) && this.state.phoneNumber.length !=10) {
+                this.setState({errorMessage: "You have to enter a correct phone Number"})
+            }
+
+            else if (!nameFormat.test(this.state.tittle)) {
+                this.setState({errorMessage: "You have to enter a correct tittle name"})
+            }
+
+            else if (!nameFormat.test(this.state.NameofTheSchool))  {
+
+                this.setState({errorMessage: "You have to enter correct Name of The School "})
+            }
+            else {
+                if (this.state.errorMessage === '') {
+                    this.applyApiRequest(UserApply)
+                }
+            }
+
+        }
+
+        else {
+            this.setState({errorMessage: "Please fill all the inputs , reasons and the comment section correctly."})
+        }
+
+
+    };
+
+    // accept each input values
+    onNameChange(event) {
+        this.setState({name: event.target.value})
+    }
+
+    onEmailChange(event) {
+        this.setState({email: event.target.value})
+    }
+
+    onPhoneNumberChange(event) {
+        this.setState({phoneNumber: event.target.value})
+    }
+
+    onNameofTheSchoolChange(event) {
+        this.setState({NameofTheSchool: event.target.value})
+    }
+
+    ontittleChange(event) {
+        this.setState({tittle: event.target.value})
+    }
+
+// shows error or success message
+    errorcheck = () => {
+        if (this.state.errorMessage) {
+            return <Typography variant='h6'
+                               style={{
+                                   color: 'red',
+                                   marginLeft: '5px',
+                                   fontSize: '14px'
+                               }}>{this.state.errorMessage}</Typography>
+        } else {
+            return <Typography variant='body2' style={{color: 'red', display: 'none'}}>''</Typography>
+        }
+    };
+    successCheck = () => {
+        if (this.state.successMessage) {
+            return <Typography variant='h6'
+                               style={{color: 'green', marginLeft: '5px'}}>{this.state.successMessage}</Typography>
+        } else {
+            return <Typography variant='body2' style={{color: 'red', display: 'none'}}>''</Typography>
+        }
+
+    };
+
+    render() {
+        const {classes} = this.props;
+        return (
+            <div className={classes.root}>
+                <div className={classes.apply}><CardContent>
+                    <Typography variant="h5"> 3rd Party representative: </Typography>
+                    <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                        <Card className={classes.contact1}><CardContent className="frmctl">
+                            <FormControl>
+                                <InputLabel htmlFor="my-input"> Full Name</InputLabel>
+                                <Input
+                                    value={this.state.name} onChange={this.onNameChange.bind(this)}
+                                    id="my-input"
+                                    type={"text"}
+                                    aria-describedby="my-helper-text"
+                                />
+                            </FormControl>
+                            <FormControl>
+                                <InputLabel htmlFor="my-input">Email address</InputLabel>
+                                <Input
+                                    value={this.state.email} onChange={this.onEmailChange.bind(this)}
+                                    id="my-input"
+                                    type={"email"}
+                                    aria-describedby="my-helper-text"
+                                />
+                            </FormControl>
+                            <FormControl>
+                                <InputLabel htmlFor="my-input">Phone Number</InputLabel>
+                                <Input
+                                    value={this.state.phoneNumber} onChange={this.onPhoneNumberChange.bind(this)}
+                                    id="my-input"
+                                    type={"number"}
+                                    aria-describedby="my-helper-text"
+                                />
+                            </FormControl>
+                            <FormControl>
+                                <InputLabel htmlFor="my-input">tittle</InputLabel>
+                                <Input
+
+                                    id="my-input"
+                                    type={"text"}
+                                    aria-describedby="my-helper-text"
+                                    value={this.state.tittle} onChange={this.ontittleChange.bind(this)} />
+                            </FormControl>
+
+                            <FormControl className={classes.NameofTheSchool}>
+
+                                <InputLabel htmlFor="my-input">Name of The School</InputLabel>
+                                <Input
+                                    id="my-input"
+                                    type={"text"}
+                                    aria-describedby="my-helper-text"
+                                    value={this.state.NameofTheSchool} onChange={this.onNameofTheSchoolChange.bind(this)} />
+                            </FormControl>
+
+
+                            <YearOfClass onSubmit={this.handleOtherSubmit.bind(this)}></YearOfClass>
+
+                            <Level onSubmit={this.handleOtherSubmit.bind(this)}></Level>
+
+                            <TopicOfInterest onSubmit={this.handleOtherSubmit.bind(this)}></TopicOfInterest>
+
+                            <Knowledge onSubmit={this.handleOtherSubmit.bind(this)}></Knowledge>
+
+                            <Reason1 onSubmit={this.handleOtherSubmit.bind(this)}></Reason1>
+
+                            <Reason onSubmit={this.handleOtherSubmit.bind(this)}></Reason>
+
+                            <Comment onSubmit={this.handleOtherSubmit.bind(this)}></Comment>
+
+                            <PersonalLaptop onSubmit={this.handleOtherSubmit.bind(this)}></PersonalLaptop>
+
+                            <div>
+                                <Typography>Please share the message to friends.</Typography>
+                                <ShareIcon></ShareIcon>
+                            </div>
+
+                            <Typography>Melkam Edele/GOOD LUCK!</Typography>
+
+                        </CardContent>
+
+                            {this.state.errorMessage ? this.errorcheck() : this.successCheck()}
+                            <Button variant="contained" color="primary"  type="submit"
+                                    className="btn">Subimit</Button>
+
+                        </Card>
+
+                    </form>
+                </CardContent></div>
+
+            </div>
+        );
+    }
 }
 
-export default Apply1;
+export default withStyles(styles, { withTheme: true })(Apply1);
+

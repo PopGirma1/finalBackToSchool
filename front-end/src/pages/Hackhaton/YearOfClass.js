@@ -24,7 +24,7 @@ export default function YearOfClass() {
                 }}
                 id="controllable-states-demo"
                 options={options}
-                style={{ width: 300 }}
+                style={{ width: 870 }}
                 renderInput={(params) => <TextField {...params} label="Choose your class of year" variant="outlined" />}
             />
         </div>

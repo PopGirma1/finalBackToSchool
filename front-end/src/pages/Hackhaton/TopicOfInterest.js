@@ -24,7 +24,7 @@ export default function TopicOfInterest() {
                 }}
                 id="controllable-states-demo"
                 options={options}
-                style={{ width: 300 }}
+                style={{ width: 870 }}
                 renderInput={(params) => <TextField {...params} label="Choose your topic of interest only one" variant="outlined" />}
             />
         </div>

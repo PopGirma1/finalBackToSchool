@@ -5,48 +5,69 @@ import 'react-awesome-slider/dist/styles.css';
 import Apply from './Apply'
 import Apply1 from "./Apply1";
 import About from './About'
+import {Link} from 'react-scroll'
+import { scroller } from "react-scroll";
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
         display: "flex",
         flexDirection: "column",
-        padding:"50px",
-        justifyContent: "center",
+        padding:"10px",
 
     },
-    anmation:{
-        height: '100%',
-        width: '100%',
-        display: 'flex',
-        alignItems: "center",
-       justifyContent: "center",
-        backgroundColor:'white',
-        overflowY: 'scroll',
+    root1: {
+        display: "flex",
+        flexDirection: "row",
+        padding:"10px",
+
     },
     apply:{
         margin:'40px'
+    },
+    apply1:{
+        marginBottom:'20px'
+    },
+    about:{
+        marginBottom:'20px'
     }
 }));
 
 function Hackhaton() {
+
+
+
     const classes=useStyles();
     return(
-        <div className={classes.root}>
-            <div>
-                <AwesomeSlider>
-                    <div className={classes.anmation}>
-                        <About></About>
-                    </div>
-                    <div className={classes.anmation} id="Apply">
-                            <Apply></Apply>
-                    </div>
-                </AwesomeSlider>
-            </div>
-            <div>
-            <Apply1></Apply1>
-            </div>
+
+<div className={classes.root}>
+    <div className={classes.root1}>
+        <div className={classes.about}>
+
+            <About></About>
         </div>
+        <div className={classes.apply1} onClick={scrollToSection}>
+            <Apply></Apply>
+        </div>
+    </div>
+    <div className="apply">
+        <Apply1></Apply1>
+    </div>
+
+</div>
     );
 }
+
+
+const   scrollToSection = () => {
+    scroller.scrollTo("apply", {
+        duration: 1000,
+        delay: 1,
+        smooth: "easeInOutQuart",
+    });
+}
+
+
 export default Hackhaton;
 
 

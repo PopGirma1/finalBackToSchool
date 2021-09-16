@@ -24,7 +24,7 @@ export default function Knowledge() {
                 }}
                 id="controllable-states-demo"
                 options={options}
-                style={{ width: 300 }}
+                style={{ width: 870 }}
                 renderInput={(params) => <TextField {...params} label="Prior knowledge in chosen topic." variant="outlined" />}
             />
         </div>

@@ -31,7 +31,8 @@ const useStyles = (theme) => ({
         flexDirection: "row",
         flexWrap: 'nowrap',
         flexFlow: "column wrap",
-
+        marginTop:'15px',
+        marginBottom:'15px'
     },
     contact:{
         display: "flex",

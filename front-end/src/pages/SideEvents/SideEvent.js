@@ -8,6 +8,8 @@ import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import Button from '@material-ui/core/Button';
 import Card1 from "./Card1";
+import New from "./Event/New";
+import MainBody from './Event/index'
 
 const useStyles = (theme) => ({
 
@@ -33,18 +35,25 @@ const useStyles = (theme) => ({
     btn:{
         marginLeft:'460px'
     }
+    ,
+    feedback:{
+        marginBottom:'15px',
+    }
 
 
 });
 
 class SideEvent extends Component{
-    onSubmit = (email, feedback) => {
-        console.log(email, feedback);
-    };
+
     render(){
         const { classes } = this.props;
     return (
         <div>
+
+            <Card style={{marginBottom:'0px',paddingBottom:'10%'}}>
+                <MainBody></MainBody>
+            </Card>
+
             <Typography variant="h6" >Side Events</Typography>
             <div className={classes.root} >
                 <Card > <CardContent>
@@ -60,7 +69,7 @@ class SideEvent extends Component{
                     </Typography>
                 </CardContent></Card>
             </div>
-            <Button variant="contained" color="primary" className={classes.btn}>
+            <Button onClick="/Hackhaton" variant="contained" color="primary" className={classes.btn}>
                 Registration is now open!
             </Button>
             <div className={classes.root}>
@@ -91,9 +100,14 @@ class SideEvent extends Component{
                 </CardContent></Card>
             </div>
             <div>
+
+                <Card style={{marginBottom:'20px'}}>
+                    <New></New>
+                </Card>
+
                 <Card className={classes.feedback}><CardContent>
                     <Typography variant="h6">Do this valuable thing! Feedback Us!</Typography>
-                    <FeedBack onSubmit={this.onSubmit}/>
+                    <FeedBack/>
                 </CardContent></Card>
             </div>
 

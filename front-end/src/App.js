@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, HashRouter, BrowserRouter } from "react-router-dom";
+import { Route, BrowserRouter } from "react-router-dom";
 import { withStyles, Container } from "@material-ui/core";
 
 import { Footer } from "./pages/Home/common/footer";
@@ -16,8 +16,10 @@ import HomePage from "./pages/Home/home/homePage";
 import "./pages/Home/assets/css/App.css";
 import "./pages/Home/assets/css/gallery.css";
 import "./pages/Home/assets/css/section.css";
+
 const useStyles = (theme) => ({
-  root: {},
+  root: {
+  },
   mainParts: {
     marginTop: "12px",
     marginBottom: "3px",
@@ -41,7 +43,7 @@ class App extends React.Component {
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.root}>
+      <div className={classes.root} >
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           {/* <NavTabs getToken={this.getToken} /> */}
           <TopBar />
@@ -60,9 +62,7 @@ class App extends React.Component {
             <Container>
               <Route path="/SideEvents" component={SideEvent} />
             </Container>
-            <Container>
-              <Route path="/TestimonialAndGallery" component={Testimonial} />
-            </Container>
+
             <Container>
               <Route path="/About" component={About} />
             </Container>
