@@ -2,9 +2,7 @@ import React from "react";
 import logo from "../assets/images/backtoschollogo.png";
 
 const useStyles = (theme) => ({
-  foo:{
-    marginTop:'40px'
-  }
+
 });
 
 

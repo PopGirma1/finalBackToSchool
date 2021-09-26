@@ -213,7 +213,7 @@ class Contact extends React.Component {
                       <InputLabel htmlFor="my-input"> Name</InputLabel>
                       <Input
                           value={this.state.name} onChange={this.onNameChange.bind(this)}
-                          id="my-input"
+                          id="name"
                           type={"text"}
                           aria-describedby="my-helper-text"
                       />
@@ -222,7 +222,7 @@ class Contact extends React.Component {
                       <InputLabel htmlFor="my-input">Email address</InputLabel>
                       <Input
                           value={this.state.email} onChange={this.onEmailChange.bind(this)}
-                          id="my-input"
+                          id="email"
                           type={"email"}
                           aria-describedby="my-helper-text"
                       />
@@ -231,7 +231,7 @@ class Contact extends React.Component {
                       <InputLabel htmlFor="my-input">Phone Number</InputLabel>
                       <Input
                           value={this.state.phoneNumber} onChange={this.onPhoneNumberChange.bind(this)}
-                          id="my-input"
+                          id="phone"
                           type={"number"}
                           aria-describedby="my-helper-text"
                       />
@@ -240,7 +240,7 @@ class Contact extends React.Component {
                       <InputLabel htmlFor="my-input">Company</InputLabel>
                       <Input
 
-                          id="my-input"
+                          id="company"
                           type={"text"}
                           aria-describedby="my-helper-text"
                           value={this.state.company} onChange={this.onCompanyChange.bind(this)} />
@@ -250,7 +250,7 @@ class Contact extends React.Component {
 
                       <InputLabel htmlFor="my-input">Country</InputLabel>
                       <Input
-                          id="my-input"
+                          id="country"
                           type={"text"}
                           aria-describedby="my-helper-text"
                           value={this.state.country} onChange={this.onCountryChange.bind(this)} />
@@ -260,6 +260,7 @@ class Contact extends React.Component {
 
                   </CardContent>
                   <Button
+                      id="submit"
                       type="submit"
                       variant="contained"
                       color="primary"

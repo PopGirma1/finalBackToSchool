@@ -41,22 +41,12 @@ export class NavBar extends Component {
                     Side Events
                   </Link>
                 </li>
-                {/*{this.props.getToken() ? (*/}
-                {/*  <li className="nav-item">*/}
-                {/*    <Link className="nav-link" to="/Hackhaton">*/}
-                {/*      Hackhaton*/}
-                {/*    </Link>*/}
-                {/*  </li>*/}
-                {/*) : (*/}
-                {/*  <p></p>*/}
-                {/*)}*/}
 
                 <li className="nav-item">
                   <Link className="nav-link " to="/Hackhaton">
                     Hackhaton
                   </Link>
                 </li>
-
 
                 <li className="nav-item">
                   <Link className="nav-link " to="/Exhibitor">
@@ -69,6 +59,23 @@ export class NavBar extends Component {
                     Contact Us
                   </Link>
                 </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/login">
+                    Login
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/signup">
+                    Register
+                  </Link>
+                </li>
+
+                <li className="nav-item">
+                  <Link className="nav-link" to="/Dashboard">
+                    Dashboard
+                  </Link>
+                </li>
+
                 <li className="nav-item">
                   <Link className="nav-link" to="/About">
                     About Us

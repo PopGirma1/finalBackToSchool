@@ -3,14 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
 const useStyles = makeStyles((theme) => ({
-<<<<<<< HEAD
-  root: {
-    flexDirection: "end",
-  },
-  place: {
-    marginLeft: "-74%",
-  },
-=======
+
     root: {
         flexDirection:'end'
     },
@@ -18,7 +11,6 @@ const useStyles = makeStyles((theme) => ({
 
         width:'100%'
     }
->>>>>>> 3f2a5b053d4889e847d8b1a7c6005caba18de951
 }));
 
 export default function Reason() {

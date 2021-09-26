@@ -12,29 +12,7 @@ import { red } from "@material-ui/core/colors";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
-<<<<<<< HEAD
-  root: {
-    width: "auto",
-    overflowY: "scroll",
-  },
-  media: {
-    height: 0,
-    paddingTop: "56.25%", // 16:9
-  },
-  expand: {
-    transform: "rotate(0deg)",
-    marginLeft: "auto",
-    transition: theme.transitions.create("transform", {
-      duration: theme.transitions.duration.shortest,
-    }),
-  },
-  expandOpen: {
-    transform: "rotate(180deg)",
-  },
-  avatar: {
-    backgroundColor: red[500],
-  },
-=======
+
     root: {
         width:'auto',
         overflowY: 'scroll',
@@ -58,7 +36,6 @@ const useStyles = makeStyles((theme) => ({
     avatar: {
         backgroundColor: red[500],
     },
->>>>>>> 3f2a5b053d4889e847d8b1a7c6005caba18de951
 
   titile: {
     color: "red",

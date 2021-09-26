@@ -15,7 +15,7 @@ export default class TopBar extends Component {
               </Link>
             </i>
             <i className="bi bi-telephone d-flex align-items-center ms-4">
-              <span>+251-974 082036</span>
+              <span>+251-974 082037</span>
             </i>
 
             <i className="bi bi-telephone d-flex align-items-center ms-4">
