@@ -1,27 +1,26 @@
 import React from "react";
-import biniyamgebreyes from "../assets/images/biniamgebreyes.jpg";
-import attofisseha from "../assets/images/atofisseha.jpg";
-import danetgutema from "../assets/images/danetgutema.jpg";
-import dawityifru from "../assets/images/dawityifru.jpg";
-import desalegnsamuel from "../assets/images/desalegnsamuel.JPG";
-import edenambelu from "../assets/images/edenambelu.jpg";
-import etsubdink from "../assets/images/etsubdink.jpg";
-import gebertjansen from "../assets/images/gebertjansen.jpg";
-import getachewalemu from "../assets/images/getachewalemu.jpg";
-import hayleleulambaw from "../assets/images/hayleleulambaw.jpg";
-import herantadesse from "../assets/images/Herantadesse.jpg";
-import kidistsegut from "../assets/images/kidistsegut.jpg";
-import mekedelamekuriahailu from "../assets/images/mekedelamekuriyahailu.jpg";
-import nebiyuaynalem from "../assets/images/nebiyuaynalem.jpg";
-import neway from "../assets/images/neway.jpg";
-import sinshawalemu from "../assets/images/sinshawalemu.jpg";
-import sosinatesfalem from "../assets/images/sosinatesfalem.jpg";
-import tesfaneshayele from "../assets/images/Tesfaneshayele.jpg";
-import wudalatgedamu from "../assets/images/wudalatgedamu.JPG";
-import yeabsiradesalegn from "../assets/images/yeabsiradesalegn.jpg";
-import yosef from "../assets/images/yosef.jpg";
-import zenebumelaku from "../assets/images/zenebumelaku.jpg";
-import noosphereaffair from "../assets/images/noosphere.jpg";
+import biniyamgebreyes from "../assets/testimonial/BinyamGebreyesses.jpg";
+import danetgutema from "../assets/testimonial/DanatGutema.jpg";
+import dawityifru from "../assets/testimonial/DawitYifru.jpg";
+import desalegnsamuel from "../assets/testimonial/DesalegnAlemu.jpg";
+import edenambelu from "../assets/testimonial/EdenAmbelu.jpg";
+import etsubdink from "../assets/testimonial/TekluTafesse.jpg";
+import gebertjansen from "../assets/testimonial/GebertJanssen.jpg";
+import getachewalemu from "../assets/testimonial/GetachewAlemu.jpg";
+import hayleleulambaw from "../assets/testimonial/GebertJanssen.jpg";
+import herantadesse from "../assets/testimonial/HeranTadesse.jpg";
+import kidistsegut from "../assets/testimonial/KidistSigute.jpg";
+import mekedelamekuriahailu from "../assets/testimonial/MekidelaMekurai.jpg";
+import nebiyuaynalem from "../assets/testimonial/NebiouAynalem.jpg";
+import neway from "../assets/testimonial/NebiouAynalem.jpg";
+import sinshawalemu from "../assets/testimonial/SinshawAlemu.jpg";
+import sosinatesfalem from "../assets/testimonial/yosefFantu.jpg";
+import tesfaneshayele from "../assets/testimonial/TesfaneshAyele.jpg";
+import wudalatgedamu from "../assets/testimonial/BinyamGebreyesses.jpg";
+import yeabsiradesalegn from "../assets/testimonial/YeabsiraDesalegn.jpg";
+import yosef from "../assets/testimonial/yosefFantu.jpg";
+import zenebumelaku from "../assets/testimonial/ZenebuMelaku.jpg";
+import noosphereaffair from "../assets/testimonial/GebertJanssen.jpg";
 import "../assets/css/style.css";
 import { Component } from "react";
 import { Modal } from "react-bootstrap";
@@ -46,6 +45,9 @@ export default class testimonialandgallery extends Component {
             "ዘርፈ ብዙ ከሆኑት የትመህርት ችግሮቻችን መከካል የትምህርት  ተደራሽነት ፣ፍትሀዊነት ፣ተገቢነት... ወዘተ ጉዳዮች በሀገራችን ጎልተው የሚስተዋሉ ሲሆን በተለይም ደግሞ ጥራት  ከቅድመ መደበኛ እስከ ከፍተኛ የትምህርት ተቋማት ዛሬም ድረስ ያልተመለሰ ቁለፍ ጉዳይ ሆኖ ይገኛል ። ከላይ ዘርዘር ያደረግናቸው መሰረታዊ የትምህርት ችግሮች በመንግሥት አልያም በተወሰኑ አካላት የሚፈቱ ሳይሆን የሁሉንም ርብርቦሽ የሚጠይቅ ነው። ስለሆነም ባክ ቱ ስኩል ፕሮጀክት በዚህ ዘርፍ እያደረገ ያለው ሀገራዊ እንቅስቃሴ ሊበረታታ እና ሊደገፍ ይገባል እላለሁ ። ",
           worksat: "የትምህርት ባለሙያ ...በከፍተኛ ትምህርት ተቋማት መምህር ፣ ተመራማሪ እና አሰልጣኝ",
         },
+
+
+
         {
           id: 2,
           img: getachewalemu,
@@ -54,14 +56,19 @@ export default class testimonialandgallery extends Component {
             "በዚህ ክ/ዘመን ከሁሉም በላይ  የሰው ልጅ ዋንኛው ህላዌ  ትምህርት ነው።  ዓለም በዕውቀት ከፍታ የምትበርም ሆናለች። ምርምሩ በመርቀቁ  ከምድሩ፣ ከጠፈሩም አዳዲስ ግኝቶች የሚፈላለትና የሚፈካለት ትውልድ ላይ ነን።  በየዓመቱ በአማራጭ የትምህርት መርጃ ቁሳቁስና ትምህርት ቤቶችን ለመምረጥ የሚያስችል አውደ ርዕይ በማዘጋጀት ሰፊ ልምድ ካለው ድርጅት ጋር ዛሬም ስሰራ ደስተኛ ነኝ።",
           worksat: "",
         },
+
+
         {
           id: 3,
-          img: tesfaneshayele,
-          name: "Tesfanesh Ayele",
+          name: "Gebert Janssen",
+          img: gebertjansen,
           description:
-            "We have found the education platform quite beneficial to promote the Alpha University College to the needy from all over the country. The side ways workshops are also very productive to share experiences, to promote new services and   work with potential practitioners from all over the globe. Thank you Back to School Ethiopia Expo, keep it up!",
-          worksat: "Public Relation officer, Alpha University College",
+              "It doesn’t matter what you want to do. Do you want to develop yourself? Do you want to create impact? Do you want to have fun in your life? It all starts with education! Without education, these goals will be unattainable.Back to school Ethiopia Expo is a good example of an organization that shares this view. They create equal opportunities for everyone, young or old, making education accessible to everyone. I am proud to be in contact with this organization and to be able to offer assistance if necessary",
+          worksat:
+              "author, lecturer, event specialist and CEO Eventarchitect-group",
         },
+
+
         {
           id: 4,
           name: "Heran Tadesse ",
@@ -202,7 +209,7 @@ export default class testimonialandgallery extends Component {
         {
           id: 21,
           name: "Fisseha Asres ",
-          img: noosphereaffair,
+          img: biniyamgebreyes,
           description:
             "Back to School Expo is one of it's kind that helps our Children to get ready for the new Academic year and more so to make it part of their culture to make Education a top priority",
           worksat: " Owner Advisor Ethiopian Skylight Hotel",
@@ -223,15 +230,17 @@ export default class testimonialandgallery extends Component {
             "Back to school እያደረገ ያለውን አውደርዕይ ለማየት ሞክሪያለው ለአንድ ሀገር ማደግ ትምህርት ቁልፍ ነገር ስለሆነ በደንብ ሊሰራበት ይገባል። እናም እንደዚህ አይነት የትምህርት አውደርዕዮች ጠቃሚ ናቸው። የግዕዝ ቋንቋ እንዲስፋፋና እንዳይሞት ከቤተክርስቲያን ውጪ ሁላችንም ኢትዮጵያውያን ርብርብ ማድረግ አለብን ብዙ ቀደምት መፅሐፍት በዚሁ ቋንቋ ስለተፃፉ። የአብነት ተማሪዎችን ማካተቱ ደስ ብሎኛል። እናም በተጨማሪ ለቴክኖሎጂና ፈጠራዎች እንዲተዋወቁ በር ይከፍታል።",
           worksat: "Student At Menen Bordind School ",
         },
+
         {
           id: 24,
-          name: "Gebert Janssen",
-          img: gebertjansen,
+          img: tesfaneshayele,
+          name: "Tesfanesh Ayele",
           description:
-            "It doesn’t matter what you want to do. Do you want to develop yourself? Do you want to create impact? Do you want to have fun in your life? It all starts with education! Without education, these goals will be unattainable.Back to school Ethiopia Expo is a good example of an organization that shares this view. They create equal opportunities for everyone, young or old, making education accessible to everyone. I am proud to be in contact with this organization and to be able to offer assistance if necessary",
-          worksat:
-            "author, lecturer, event specialist and CEO Eventarchitect-group",
+              "We have found the education platform quite beneficial to promote the Alpha University College to the needy from all over the country. The side ways workshops are also very productive to share experiences, to promote new services and   work with potential practitioners from all over the globe. Thank you Back to School Ethiopia Expo, keep it up!",
+          worksat: "Public Relation officer, Alpha University College",
         },
+
+
       ],
     });
   }
