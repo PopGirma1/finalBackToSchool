@@ -15,6 +15,8 @@ const useStyles = makeStyles((theme) => ({
   root: {
     width: "auto",
     marginBottom: "20px",
+    display:'flex',
+    flexDirection:'row'
   },
   media: {
     height: 0,
@@ -36,6 +38,8 @@ const useStyles = makeStyles((theme) => ({
 
   titile: {
     color: "green",
+    maxWidth:'30%',
+    marginRight:'10%'
   },
   btn: {
     marginTop: "60px",
@@ -54,32 +58,30 @@ export default function Offer() {
     <Card className={classes.root}>
       <CardHeader
         className={classes.titile}
+
         title="WHAT WE OFFER "
-        subheader="Our platform is a gateway for local & international institutions
-                        from over 116 countries worldwide to come together for a mutual cause,
-                         to create uncommon freedom for scholars to connect with the right
-                         institutions and form professional ties based on grounds of interest.!                                                             "
+        subheader=" Our platform is a gateway for local & international institutions
+        from over 116 countries worldwide to come together for a mutual cause,
+        to create uncommon freedom for scholars to connect with the right
+        institutions and form professional ties based on grounds of interest. "
       />
 
-      <Typography paragraph>List of Exhibitors:</Typography>
-
-      <ol type="A">
+      <ol type="A" style={{display:'flex',justifyContent:'center',marginTop:'5%'}}>
+        <Typography paragraph style={{display:'flex',marginTop:'-1%',marginRight:'-10%'}}>List of Exhibitors:</Typography>
         <CardContent>
           <li>Government Education Bureaus & Policy Makers </li>
           <li>Local/International Schools, Colleges and Universities</li>
           <li>Local/International Online Education Centers </li>
-          <li>Digital Libraries  </li>
+          <li>Digital Libraries </li>
+          <li>Technic and Vocational Institutions </li>
+          <li>Local/International Foundations </li>
+          <li>Educational and/or Research Centers </li>
+          <li>Special Needs and Inclusive Education Centers </li>
+          <li>Art and Cultural Institutions/Centers </li>
+          <li>Tourism and Hospitality Institutions/ Organization </li>
+          <li>Theological Colleges/Universities </li>
+          <li>Professional Associations </li>
 
-          <Typography paragraph>
-            <li>Technic and Vocational Institutions  </li>
-            <li>Local/International Foundations  </li>
-            <li>Educational and/or Research Centers  </li>
-            <li>Special Needs and Inclusive Education Centers  </li>
-            <li>Art and Cultural Institutions/Centers  </li>
-            <li>Tourism and Hospitality Institutions/ Organization  </li>
-            <li>Theological Colleges/Universities </li>
-            <li>Professional Associations  </li>
-          </Typography>
         </CardContent>
         <CardActions disableSpacing>
           <IconButton

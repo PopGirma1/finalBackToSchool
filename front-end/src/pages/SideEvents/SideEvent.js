@@ -3,12 +3,12 @@ import {
     Typography,
 } from "@material-ui/core";
 import React , {Component} from "react";
-import FeedBack from "./Feedback";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import Button from '@material-ui/core/Button';
 import Card1 from "./Card1";
-import New from "./Event/New";
+import Event from "../ShowEvents/Event";
+
 
 const useStyles = (theme) => ({
 
@@ -45,11 +45,14 @@ const useStyles = (theme) => ({
 class SideEvent extends Component{
 
     render(){
+
         const { classes } = this.props;
     return (
         <div>
-
-            <Typography variant="h6" >Side Events</Typography>
+            <div style={{display:'flex',justifyContent:'center'}}>
+                <Event></Event>
+            </div>
+            <Typography variant="h6" style={{display:'flex',justifyContent:'center',marginTop:'2%'}} >Side Events</Typography>
             <div className={classes.root} >
                 <Card > <CardContent>
                     <Typography variant="h6" style={{ margin: "2em", lineHeight: "1.5" }} className={classes.paragraphStyling}>
@@ -83,23 +86,21 @@ class SideEvent extends Component{
                 </CardContent></Card>
                 <Card1></Card1>
                 <Card><CardContent>
-                    <Typography variant="h5">Entertainments</Typography>
+                    <Typography variant="h5" style={{display:'flex',justifyContent:'center'}}>Entertainments</Typography>
                     <Typography>
                         <ul className={classes.Entertainments}>
-                            Although we take our job seriously, Fun is a part of life and hear are some Ethiopian style.
-                            <li>Talent Show Performance</li>
-                            <li>Heath & Yoga Sessions</li>
-                            <li>City Tour  & Retreat Programs</li>
+                            <Typography style={{display:'flex',margin:'5%',maxWidth:'60%'}}>Although we take our job seriously, Fun is a part of life and hear are some Ethiopian style.</Typography>
+                             <ol style={{display:'flex',justifyContent:'end',flexDirection:'column'}}>
+                                 <li >Talent Show Performance</li>
+                                 <li >Health & Yoga Sessions</li>
+                                 <li >City Tour  & Retreat Programs</li>
+                             </ol>
                         </ul>
                     </Typography>
                 </CardContent></Card>
             </div>
             <div>
 
-                <Card className={classes.feedback}><CardContent>
-                    <Typography variant="h6">Do this valuable thing! Feedback Us!</Typography>
-                    <FeedBack/>
-                </CardContent></Card>
             </div>
 
         </div>

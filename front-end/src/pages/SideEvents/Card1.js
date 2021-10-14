@@ -13,7 +13,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: 345,
+    maxWidth:'40%',
   },
   media: {
     height: 0,
@@ -44,7 +44,10 @@ export default function Card1() {
 
   return (
     <Card className={classes.root}>
-      <CardHeader title="Webinars/Workshops/Conferences" />
+      <div style={{display:'flex',justifyContent:'center'}}>
+        <CardHeader title="Webinars/Workshops/Conferences"/>
+      </div>
+
       <CardContent>
         <Typography component="p">
           The core values in attending workshops, onsite & virtual, are the
@@ -69,7 +72,7 @@ export default function Card1() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Event Pedigree.</Typography>
+          <Typography paragraph>Buffet's Of Workshops</Typography>
           <Typography paragraph>
             <ul>
               <li>The future of Education.</li>

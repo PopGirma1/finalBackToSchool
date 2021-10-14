@@ -4,7 +4,7 @@ import { Carousel } from "../home/carousel.js";
 import { PartenersList } from "./partenersList.js";
 import { SecondPoster } from "./secondPoster.js";
 import RegisterSection  from "./registerSection.js";
-import Testimonialandgallery from "../common/testimonialandgallery.js";
+import Testimonialandgallery from "./testimonialandgallery.js";
 import {scroller} from "react-scroll";
 
 export default class HomePage extends Component {
@@ -14,7 +14,7 @@ export default class HomePage extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <React.Fragment >
           <div onClick={scrollToSection}><Carousel/></div>
           <div><PartenersList /></div>
           <div><SecondPoster /></div>

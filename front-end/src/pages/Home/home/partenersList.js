@@ -4,42 +4,42 @@ import aviationAcademylogo from "../assets/images/aviationAcademyLogo.png";
 import intellectualSchoolLogo from "../assets/images/intellectualSchoolLogo.png";
 export const PartenersList = () => {
   return (
-    <section id="parteners" className="parteners">
-      <div className="container">
-        <div className="row">
-          <div className="col-lg-4  ">
-            <div className="col d-flex align-items-center justify-content-center">
-              <img src={noospherelogo} className="img-fluid" alt="" />
-            </div>
-            <span className="partenersName">
-              <p>Founder/Organizer</p>
-            </span>
-          </div>
+    <div style={{marginTop:'10%'}} >
+      {/*  <div style={{display: 'flex', flexWrap: 'wrap', flexDirection: 'row',marginLeft:'10%'}}>*/}
+      {/*                <div style={{width:'30%'}}>*/}
+      {/*                          <div >*/}
+      {/*                            <img src={noospherelogo} style={{width:'30%'}}/>*/}
+      {/*                          </div>*/}
+      {/*                          <span className="partenersName">*/}
+      {/*                            <p>Founder/Organizer</p>*/}
+      {/*                          </span>*/}
+      {/*                </div>*/}
 
-          <div className="col-lg-4 align-items-center justify-content-center ">
-            <div className="col d-flex align-items-center justify-content-center">
-              <img src={aviationAcademylogo} className="img-fluid" alt="" />
-            </div>
-            <span className="partenersName">
-              <p>Exclusive Official Partner</p>
-            </span>
-          </div>
 
-          <div className="col-lg-4">
-            <div className="col d-flex align-items-center justify-content-center">
-              <img src={intellectualSchoolLogo} className="img-fluid" alt="" />
-            </div>
-            <span className="partenersName">
-              <p>Education Partner</p>
-            </span>
-          </div>
-        </div>
-      </div>
+      {/*                <div style={{width:'30%'}}>*/}
+      {/*                      <div >*/}
+      {/*                        <img src={aviationAcademylogo} style={{width:'30%'}}/>*/}
+      {/*                      </div>*/}
+      {/*                      <span className="partenersName">*/}
+      {/*                        <p>Exclusive Official Partner</p>*/}
+      {/*                      </span>*/}
+      {/*                </div>*/}
+
+      {/*      <div style={{width:'30%'}}>*/}
+      {/*                      <div>*/}
+      {/*                        <img src={intellectualSchoolLogo} style={{width:'30%'}} />*/}
+      {/*                      </div>*/}
+      {/*                      <span className="partenersName">*/}
+      {/*                        <p>Education Partner</p>*/}
+      {/*                      </span>*/}
+      {/*                </div>*/}
+
+
+      {/*</div>*/}
       <div
         className="collaboration container-fluid align-items-start justify-content-start"
-        data-aos="fade-up"
-      >
-        <h2>In Collabration With </h2>
+        data-aos="fade-up">
+        <h2 style={{marginLeft:'40%',margin:'3%',fontSize:'20px'}}>In Collabration With </h2>
         <div className="container">
           <ul className="col align-items-start justify-content-start">
             <li className="d-flex align-items-center justify-content-center">
@@ -81,6 +81,6 @@ export const PartenersList = () => {
           </ul>
         </div>
       </div>
-    </section>
+    </div>
   );
 };

@@ -7,6 +7,7 @@ import Apply1 from "./Apply1";
 import About from './About'
 import {Link} from 'react-scroll'
 import { scroller } from "react-scroll";
+import Card from "@material-ui/core/Card";
 
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +42,8 @@ function Hackhaton() {
     return(
 
 <div className={classes.root}>
-    <div className={classes.root1}>
+    <div >
+        <Card className={classes.root1}>
         <div className={classes.about}>
 
             <About></About>
@@ -49,6 +51,7 @@ function Hackhaton() {
         <div className={classes.apply1} onClick={scrollToSection}>
             <Apply></Apply>
         </div>
+        </Card>
     </div>
     <div className="apply">
         <Apply1></Apply1>

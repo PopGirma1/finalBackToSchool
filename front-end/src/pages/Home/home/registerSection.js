@@ -1,10 +1,6 @@
 import React from "react";
 import backEndApi from "../../../services/api";
 import Typography from "@material-ui/core/Typography";
-import CardContent from "@material-ui/core/CardContent";
-import Input from "@material-ui/core/Input";
-import {FormControl} from "@material-ui/core";
-
 
 class RegisterSection extends React.Component {
 
@@ -31,7 +27,7 @@ class RegisterSection extends React.Component {
 
     // get the api
     homeApiRequest = async (home) => {
-        const {data} = await backEndApi.post('/contact', home);
+        const {data} = await backEndApi.post('/register', home);
         this.setState({
 
             errorMessage: '',
@@ -48,10 +44,10 @@ class RegisterSection extends React.Component {
         const UserContact = {
             name: this.state.name,
             email: this.state.email,
-            payerPhone: this.state.phoneNumber,
-            company: this.company,
-            country: this.country,
-            message:this.message,
+            phoneNumber:this.state.phoneNumber,
+            company:this.state.company,
+            country:this.state.country,
+            message:this.state.message,
         };
 
         var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -60,7 +56,7 @@ class RegisterSection extends React.Component {
 
         var pattern = new RegExp(/^[0-9\b]+$/);
 
-        if (this.state.name && this.state.email && this.state.phoneNumber && this.state.company && this.state.country && this.state.message()) {
+        if (this.state.name && this.state.email && this.state.phoneNumber && this.state.company && this.state.country && this.state.message) {
             if (!nameFormat.test(this.state.name)) {
                 this.setState({errorMessage: "The name that you have entered is incorrect."})
             }
@@ -71,7 +67,7 @@ class RegisterSection extends React.Component {
 
             }
 
-            else if (!pattern.test(this.state.phoneNumber) && this.state.phoneNumber.length !=10) {
+            else if (!pattern.test(this.state.phoneNumber)) {
                 this.setState({errorMessage: "You have to enter a correct phone Number"})
             }
 
@@ -153,16 +149,16 @@ class RegisterSection extends React.Component {
     render() {
         return (
             <section id="register" className="register">
-                <div className="container" data-aos="fade-up">
-                    <div className="section-title">
+                <div>
+                    <div>
                         <h3>
                             <span>Register Now</span>
                         </h3>
                     </div>
 
-                    <div className="row" data-aos="fade-up" data-aos-delay="100">
-                        <div className="col-lg-6">
-                            <form  id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
+                    <div style={{display: 'flex',flexDirection: 'row',width:'100%'}}>
+                        <div style={{width:'50%'}}>
+                            <form  id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST" >
                                 <div className=" form-group">
                                     <input
                                         value={this.state.name} onChange={this.onNameChange.bind(this)}
@@ -231,23 +227,24 @@ class RegisterSection extends React.Component {
 
                                 <div> {this.state.errorMessage ? this.errorcheck() : this.successCheck()} </div>
                                 <div className="text-center">
-                                    <button type="submit">Send </button>
+                                    <button type="submit" style={{width:'200px',backgroundColor:'#4BCCF7'}}>Send </button>
                                 </div>
                             </form>
                         </div>
 
-                            <div className="col-lg-6 ">
+                            <div className="col-lg-6 " style={{width:'50%'}}>
                                 <iframe
                                     title="map"
                                     className="mb-4 mb-lg-0"
                                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3940.3512717568565!2d38.755158364835765!3d9.031685441433574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85f13face90f%3A0x5cf68b9e8b6cf775!2sFirdu%20Commercial%20Center!5e0!3m2!1sen!2set!4v1630355584920!5m2!1sen!2set"
                                     frameborder="0"
-                                    style={{border: "0", width: "100%", height: "500px"}}
+                                    style={{border: "0", width: "100%", height: "400px"}}
                                     allowfullscreen
                                 ></iframe>
                             </div>
                         </div>
-                    </div>
+              </div>
+
             </section>
     );
     }

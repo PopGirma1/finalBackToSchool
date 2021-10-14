@@ -1,14 +1,11 @@
-
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
 import CardContent from "@material-ui/core/CardContent";
 import Card from "@material-ui/core/Card";
 import Typography from "@material-ui/core/Typography";
-import { FormControl ,withStyles} from "@material-ui/core";
+import {FormControl, withStyles} from "@material-ui/core";
 
 import InputLabel from "@material-ui/core/InputLabel";
 import Input from "@material-ui/core/Input";
-import Country from "../ContactUs/Country";
 import Button from "@material-ui/core/Button";
 import Link from "@material-ui/core/Link";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -20,42 +17,44 @@ import Offer from "./Offer";
 import backEndApi from "../../services/api";
 
 
-
-
 const styles = theme => ({
     root: {
         display: "flex",
-        flexDirection:'row',
-        marginLeft:'-30px',
+        flexDirection: 'row',
+        marginLeft: '-30px',
     },
-    register:{
-        padding:'25px',
-        minHeight:'460px'
+    register: {
+        minHeight: '460px',
+        width: '57%',
+        marginTop:'20px'
     },
-    country:{
-        marginTop:'30px'
+    register1: {
+        padding: '20px',
+        minHeight: '480px',
     },
-    map:{
-        marginRight:'-400px',
-        padding:'25px'
+
+
+    map: {
+        marginRight: '-400px',
+        padding: '25px'
     },
-    today:{
-        backgroundColor:'#f5f8f5',
-        padding:'30px',
-        borderRadius:'22px',
-        color:'#3C10C2',
-        fontSize:'26px'
+    today: {
+        backgroundColor: '#f5f8f5',
+        padding: '30px',
+        borderRadius: '22px',
+        color: '#3C10C2',
+        fontSize: '26px'
     },
-    total:{
-        backgroundColor:'rgba(249,245,245,0.8)',
-        borderRadius:'22px',
+    total: {
+        backgroundColor: 'rgba(249,245,245,0.8)',
+        borderRadius: '22px',
 
     },
-    contact:{
-        margin:'60px'
+    contact: {
+        margin: '60px'
     },
-    contact1:{
-        marginBottom:'10px'
+    contact1: {
+        marginBottom: '10px'
     },
 });
 
@@ -68,16 +67,16 @@ class Register extends React.Component {
         this.state = {
             name: '',
             email: '',
-            phoneNumber:'',
+            phoneNumber: '',
             company: '',
-            country:'',
+            country: '',
             errorMessage: '',
             successMessage: '',
         }
 
     }
 
-    handleSubmit(e){
+    handleSubmit(e) {
         e.preventDefault();
         this.validateInput();
     }
@@ -94,7 +93,6 @@ class Register extends React.Component {
     };
 
 
-
     // validate correct input values
 
     validateInput = () => {
@@ -108,40 +106,30 @@ class Register extends React.Component {
 
         var mailformat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
-        var nameFormat=/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/;
+        var nameFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]/;
 
         var pattern = new RegExp(/^[0-9\b]+$/);
 
         if (this.state.name && this.state.email && this.state.phoneNumber && this.state.company && this.state.country) {
             if (!nameFormat.test(this.state.name)) {
                 this.setState({errorMessage: "The name that you have entered is incorrect."})
-            }
-
-            else if (!mailformat.test(this.state.email)) {
+            } else if (!mailformat.test(this.state.email)) {
 
                 this.setState({errorMessage: "The email that you have provided is invalid."})
-            }
-            else if (!pattern.test(this.state.phoneNumber) && this.state.phoneNumber.length !=10) {
+            } else if (!pattern.test(this.state.phoneNumber) && this.state.phoneNumber.length != 10) {
                 this.setState({errorMessage: "You have to enter a correct phone Number"})
-            }
-
-            else if (!nameFormat.test(this.state.company)) {
+            } else if (!nameFormat.test(this.state.company)) {
                 this.setState({errorMessage: "You have to enter a correct company name"})
-            }
-
-            else if (!nameFormat.test(this.state.country))  {
+            } else if (!nameFormat.test(this.state.country)) {
 
                 this.setState({errorMessage: "You have to select a correct country name"})
-            }
-            else {
+            } else {
                 if (this.state.errorMessage === '') {
                     this.contactApiRequest(UserContact)
                 }
             }
 
-        }
-
-        else {
+        } else {
             this.setState({errorMessage: "Please fill all the inputs correctly."})
         }
 
@@ -197,25 +185,32 @@ class Register extends React.Component {
         return (
             <div>
                 <Card className={classes.total}><CardContent>
-                    <Typography>NOW IT’S IS YOUR TURN TO MEET YOUR RIGHT STUDENTS</Typography>
-                    <Typography variant="h5">BECOME A SPONSOR! </Typography>
-                    <Typography>
+
+                    <Typography style={{display:'flex',justifyContent:'center'}}>NOW IT’S IS YOUR TURN TO MEET YOUR RIGHT STUDENTS!</Typography>
+                    <Typography variant="h5" style={{display:'flex',justifyContent:'center',margin:'3%',backgroundColor:'#ee662d',width:'450px',fontSize:'25px',marginLeft:'35%'}}>BECOME A SPONSOR! </Typography>
+                    <Typography style={{display:'flex',justifyContent:'center'}}>
                         Join our international education platform and we make sure
-                        targeted audience of educationalists & international
-                        partners that can extend your business globally should witness your presence.
+                        targeted audience of educationalists &
+                    </Typography>
+                    <Typography style={{display:'flex',justifyContent:'center'}}>
+                        international partners that can extend your business globally should witness your presence.
                     </Typography>
 
-                    <Card className={classes.today}><CardContent><Typography variant="h5">
+                    <Card className={classes.today} style={{display:'flex',justifyContent:'center'}}><CardContent><Typography variant="h5">
                         Do this easy thing!
-                        Register Today.
-                    </Typography></CardContent></Card>
+                    </Typography></CardContent>
+                    <CardContent style={{marginTop:'2%',marginLeft:'-16%'}}>
+                        <span >Register Today.</span>
+                    </CardContent>
+                    </Card>
+
 
                 </CardContent></Card>
                 <div className={classes.root}>
                     <div className={classes.register}>
                         <Card><CardContent>
                             <form id="contact-form" onSubmit={this.handleSubmit.bind(this)} method="POST">
-                                <Card className={classes.register}><CardContent className="frmctl">
+                                <div className={classes.register1}><div className="frmctl">
                                     <FormControl>
                                         <InputLabel htmlFor="my-input"> Name</InputLabel>
                                         <Input
@@ -238,7 +233,8 @@ class Register extends React.Component {
                                             id="my-input"
                                             type={"number"}
                                             aria-describedby="my-helper-text"
-                                            value={this.state.phoneNumber} onChange={this.onPhoneNumberChange.bind(this)}/>
+                                            value={this.state.phoneNumber}
+                                            onChange={this.onPhoneNumberChange.bind(this)}/>
                                     </FormControl>
                                     <FormControl>
                                         <InputLabel htmlFor="my-input">Company</InputLabel>
@@ -262,10 +258,11 @@ class Register extends React.Component {
                                         {this.state.errorMessage ? this.errorcheck() : this.successCheck()}
                                     </FormControl>
 
-                                </CardContent>
+                                </div>
 
-                                    <Button type="submit" variant="contained" color="primary" className="btn">Subimit</Button>
-                                </Card>
+                                    <Button type="submit" variant="contained" color="primary" style={{margin:'20px',width:'200px'}}
+                                            className="btn">Subimit</Button>
+                                </div>
                             </form>
                         </CardContent></Card>
                     </div>
@@ -287,20 +284,27 @@ class Register extends React.Component {
                     <Offer></Offer>
                 </div>
                 <div className={classes.contact1}>
-                    <Card><CardContent>
-                        Contact Information
+                    <div><div>
 
-                        <Card><CardContent>
-                            Company: Noosphere Affairs
-                            Trading P.L;C
-                            Address: Firdu Commercial
-                            Building, 3rd Floor
-                            Office no 308.
 
-                            P.O.box: 54178
-                            Tel: 1 +251-974 082036
-                            Tel: 2 +251-974 082037
-                        </CardContent></Card>
+                        <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
+                           <h4 style={{}}>
+                         Contact Information
+                           </h4>
+
+                            <div>
+                                Company: Noosphere Affairs
+                                Trading P.L;C
+                                Address: Firdu Commercial
+                                Building, 3rd Floor
+                                Office no 308.
+
+                                P.O.box: 54178
+                                Tel: 1 +251-974 082036
+                                Tel: 2 +251-974 082037
+                            </div>
+
+                       </div>
                         <Card className={classes.contact}><CardContent>
                             Email:
                             <Link
@@ -333,7 +337,7 @@ class Register extends React.Component {
                             </Link>
                         </CardContent></Card>
 
-                        <Card><CardContent>
+                        <div style={{display:'flex',justifyContent:'flex-end'}}>
 
                             <Typography>Follow us on: </Typography>
                             <FacebookIcon color="primary"></FacebookIcon>
@@ -346,9 +350,9 @@ class Register extends React.Component {
                             <InstagramIcon color="primary"></InstagramIcon>
 
 
-                        </CardContent></Card>
+                        </div>
 
-                    </CardContent></Card>
+                    </div></div>
                 </div>
 
             </div>
@@ -357,4 +361,4 @@ class Register extends React.Component {
     }
 }
 
-export default withStyles(styles, { withTheme: true })(Register);
+export default withStyles(styles, {withTheme: true})(Register);

@@ -1,32 +1,34 @@
 import React from "react";
 import secondposterimage from "../assets/images/noosphere.jpg";
+import CardContent from "@material-ui/core/CardContent";
+import Card from "@material-ui/core/Card";
 
 export const SecondPoster = () => {
   return (
     <section id="about" class="about section-bg">
-      <div class="container align-items-center" data-aos="fade-up">
-        <div class="section-title">
-          <h3>
-            Enjoy Splendid Benefits of Our Hybrid fair, Onsite & Virtual Fair!
-          </h3>
-        </div>
+      <Card style={{padding:'20px'}}><CardContent>
+        <div style={{display: 'flex', flexDirection: 'row', width: '100%', marginLeft: '10%'}}>
 
-        <div class="row align-items-center justify-content-center">
-          <img src={secondposterimage} class="img-fluid" alt="" />
-          <div
-            class="col-lg-6 pt-4 pt-lg-0 content d-flex flex-column justify-content-center"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <h5>
-              Foster Global Participation Minimal Cost, Maximum Gain Delightful
-              user Experience Infinite Convenience Measurable Results Easy for
-              Decision Making It shows company care Unlimited Availability, 24/7
+          <div style={{marginTop: '0%'}}>
+            <img src={secondposterimage} width="300px" height="300px"/>
+          </div>
+          <div style={{marginTop:'6%',marginLeft:'20%'}}>
+
+              <h3 style={{marginTop: '3%',fontSize:'20px'}}>
+                Enjoy Splendid Benefits of Our Hybrid fair,
+              </h3>
+            <span style={{fontSize:'22px',marginBottom:'5%'}}>Onsite & Virtual Fair!</span>
+            <h4 style={{marginTop:'3%',fontSize:'18px',display:'flex',justifyContent:'center',maxWidth:'30%'}}>
+              Foster Global Participation, Minimal Cost Maximum Gain, Delightful
+              user Experience, Infinite Convenience, Measurable Results, Easy for
+              Decision Making, It shows company care, Unlimited Availability, 24/7,
               100% Data Confidentiality
-            </h5>
+            </h4>
+
           </div>
         </div>
-      </div>
+      </CardContent></Card>
+
     </section>
   );
 };

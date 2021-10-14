@@ -1,9 +1,8 @@
 import React from 'react';
-import {Checkbox, Container, div, FormControlLabel, withStyles} from "@material-ui/core";
+import {div, withStyles} from "@material-ui/core";
 import {Redirect} from "react-router-dom";
 
 import Button from '@material-ui/core/Button';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import TextField from '@material-ui/core/TextField';
 import Link from '@material-ui/core/Link';
 import Box from '@material-ui/core/Box';
@@ -11,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 import backEndApi from '../../services/api'
 
-const loginImage = process.env.PUBLIC_URL + '/img/image.png';
+const loginImage = process.env.PUBLIC_URL + '/noospherelogo.png';
 const useStyles = theme => ({
     container: {
         width: '100%',
@@ -25,17 +24,21 @@ const useStyles = theme => ({
     },
     root: {
         display: 'flex',
-        justifyContent: 'center',
+        justifyContent: 'space-around',
         flexWrap: 'wrap',
-        background: 'rgba(250,248,248,0.87)',
+        background: 'rgba(238,238,238,0.87)',
         borderRadius: '15px',
         height: '100vh',
         padding: 10,
         "& a": {
-            color: '#3A6351',
+            color: '#5066e4',
         },
 
-
+        [theme.breakpoints.down('sm')]: {
+            "& form":{
+                padding:0
+            }
+        }
     },
     avatar: {
         margin: theme.spacing(1),
@@ -44,10 +47,10 @@ const useStyles = theme => ({
     form: {
         display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'space-between', height: '40vh',
         width: '100%',
-        [theme.breakpoints.down('sm')]: {
-        }
+        [theme.breakpoints.down('sm')]: {}
     },
-    submit: {background: '#3F51B5',
+    submit: {
+        background: '#3F51B5',
         borderRadius:
             '5px',
         width:
@@ -89,8 +92,7 @@ const useStyles = theme => ({
         marginBottom: '-20px',
     },
     loginImgHolder: {
-        marginTop: '20px',
-        backgroundColor: "rgba(185,194,226,0.66)",
+        marginTop: '5%',
         borderRadius: '15px',
         marginBottom: 'auto',
         display: 'flex',
@@ -99,13 +101,13 @@ const useStyles = theme => ({
                 display: 'none'
             }
     },
-    formHolder:{
+    formHolder: {
         display: 'flex', flexDirection: 'column',
-        width:'35%',
-        marginTop:40,
-        [theme.breakpoints.down('sm')]:{
-            width:'100%',
-            marginTop:10,
+        width: '35%',
+        marginTop: 40,
+        [theme.breakpoints.down('sm')]: {
+            width: '100%',
+            marginTop: 10,
 
         }
     }
@@ -189,37 +191,38 @@ class Login extends React.Component {
          getUsers()*/
 
     };
-    //
-    // componentDidMount() {
-    //     const token = this.props.getToken();
-    //     console.log(token);
-    //     if (token) {
-    //         console.log("welcome Mr ");
-    //         return <Redirect to='/New'/>
-    //
-    //     }
-    // }
+
+    componentDidMount() {
+        const token = this.props.getToken();
+        console.log(token);
+        if (token) {
+            console.log("welcome Mr ");
+            return <Redirect to='/addhouse'/>
+
+        }
+    }
 
     render() {
-
-        // if (this.state.redirect || this.props.getToken()) {
-        //     console.log("welcome Mr ");
-        //     return <Redirect to='/Dashboard'/>
-        //
-        // }
+        if (this.state.redirect || this.props.getToken()) {
+            console.log("welcome Mr ");
+            return <Redirect to='/dashboard'/>
+        }
         const {classes} = this.props;
         return (
             <div className={classes.container}>
                 <div className={classes.root}>
 
+                    <div className={classes.loginImgHolder}>
+                        <img src={loginImage} alt="" width='70%' height='250px' className={classes.loginImg}/>
 
+                    </div>
 
-                    <div className={classes.formHolder} >
+                    <div className={classes.formHolder}>
 
                         <Typography align='center' component="h1" variant="h5" style={{padding: 10}}>
                             Login
                         </Typography>
-                        <form className={classes.form} noValidate >
+                        <form className={classes.form} noValidate>
 
                             <TextField
                                 variant="outlined"
@@ -248,17 +251,19 @@ class Login extends React.Component {
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+
                                 className={classes.textField}
 
                             />
-                           {/* <FormControlLabel
+                            {/* <FormControlLabel
                                 control={<Checkbox value="remember" color="primary"
                                                    onChange={this.onCheckboxChange}/>}
                                 label="I have read and agreed to Privacy Policy  & TOU"
                             />*/}
-                            <Box align='right'><Link href="/resetPassword" variant="body2">
-                                Forgot password?
-                            </Link>
+                            <Box align='right'>
+                                <Link href="/resetPassword" variant="body2">
+                                    Forgot password?
+                                </Link>
                             </Box>
                             {this.errorcheck()}
 

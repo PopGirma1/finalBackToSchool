@@ -7,9 +7,9 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography'
 
 import backEndApi from '../../services/api'
+import {Redirect} from "react-router-dom";
 
-const SignupImage = process.env.PUBLIC_URL + '/img/image.png';
-
+const SignupImage = process.env.PUBLIC_URL + '/noospherelogo.png';
 const useStyles = theme => ({
         container: {
             width: '100%',
@@ -25,7 +25,7 @@ const useStyles = theme => ({
             display: 'flex',
             justifyContent: 'space-around',
             flexWrap: 'nowrap',
-            background: 'rgba(248,245,245,0.87)',
+            background: '#eeeeee',
             borderRadius: '15px',
             height:'600px',
             padding: 10,
@@ -33,7 +33,11 @@ const useStyles = theme => ({
                 color: '#3A6351',
             },
 
-
+            [theme.breakpoints.down('sm')]: {
+                "& form":{
+                    padding:0
+                }
+            }
         },
         avatar: {
             margin: theme.spacing(1),
@@ -83,7 +87,6 @@ const useStyles = theme => ({
         },
         imgHolder: {
             marginTop: '20px',
-            backgroundColor: "rgba(223,225,232,0.66)",
             borderRadius: '15px',
             marginBottom: 'auto',
             display: 'flex',
@@ -144,7 +147,10 @@ class Signup extends React.Component {
         if (this.state.name && this.state.email && this.state.password && this.state.confirmPassword) {
             if (this.state.password !== this.state.confirmPassword) {
                 this.setState({errorMessage: "The passwords that you have entered does not match."})
-            } else if (!mailformat.test(this.state.email)) {
+            }else if (this.state.password.length<6){
+                this.setState({errorMessage: "Password should be more than 6 characters"})
+            }
+            else if (!mailformat.test(this.state.email)) {
 
                 this.setState({errorMessage: "The email that you have provided is invalid."})
 
@@ -208,7 +214,10 @@ class Signup extends React.Component {
     };
 
     render() {
-        /*if (this.state.redirect || this.props.getToken()) {
+        if (this.state.redirect) {
+            return <Redirect to='/login'/>
+
+        }/* if (this.state.redirect || this.props.getToken()) {
             return <Redirect to='/login'/>
 
         }*/
@@ -216,6 +225,16 @@ class Signup extends React.Component {
         return (
             <div className={classes.container}>
                 <div className={classes.root}>
+
+                    <div className={classes.imgHolder}>
+                        <img src={SignupImage} alt="" width='70%' height='250px' style={{
+                            borderRadius: '8px',
+                            marginTop: '20px',
+                            marginLeft: '20px',
+                            marginBottom: '-20px',
+                        }}/>
+                    </div>
+
                     <div style={{display: 'flex', flexDirection: 'column',heigh:'auto'}}>
 
                         <Typography align='center' component="h1" variant="h5" style={{padding: 10}}>
@@ -257,11 +276,13 @@ class Signup extends React.Component {
                                 fullWidth
                                 name="password"
                                 onChange={this.onPasswordChange}
-
                                 label="Password"
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
+                                inputProps={{
+                                    minLength: 8,
+                                }}
                                 className={classes.textField}
 
                             />
