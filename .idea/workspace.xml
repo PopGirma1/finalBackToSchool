@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bea0a02b-02a0-4aa6-bffc-680f7954aa50" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/back_to_school_eth_expo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/app.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/backend.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/bin/www" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/asset-manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/asset/Img/cmd.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/asset/Img/kalab.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/asset/Img/signup.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/asset/Img/wow.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/asset/icons/home.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/img/background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/img/home1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/img/home2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/img/msg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/img/signup.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/img/signup.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/css/2.ecdd39c8.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/css/2.ecdd39c8.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/css/main.744b70df.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/css/main.744b70df.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/2.9d38e6ec.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/2.9d38e6ec.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/2.9d38e6ec.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/main.2c043fb2.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/main.2c043fb2.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/runtime-main.8233b8b5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/build/static/js/runtime-main.8233b8b5.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/addevent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/adminChangeStatus.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/adminDetail.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/dashboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/editEvent.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/homepage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/login.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controller/signup.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/model/db.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/users.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1yGvKjUlvlTOVuMpJizRXCF3aBi" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/front-end/src/pages/Home/assets/testimonials" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Home\assets\testimonials" />
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Dashboard\User-dashboard" />
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Dashboard\Admin-dashboard" />
+      <recent name="H:\Web\Back_to_school\front-end\public\assets" />
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Home\assets\testimonial" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Home\assets\testimonials" />
+      <recent name="H:\Web\Back_to_school\front-end\public" />
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Home\assets\testimonial" />
+      <recent name="H:\Web\Back_to_school\back_end" />
+      <recent name="H:\Web\Back_to_school\front-end\src\pages\Home\home" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.start">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/back_end/app.js" working-dir="$PROJECT_DIR$/back_end/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/back_end/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.start" />
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bea0a02b-02a0-4aa6-bffc-680f7954aa50" name="Default Changelist" comment="" />
+      <created>1631890678414</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631890678414</updated>
+      <workItem from="1631890685523" duration="19630000" />
+      <workItem from="1632503589828" duration="1498000" />
+      <workItem from="1632512165750" duration="157000" />
+      <workItem from="1632555770403" duration="8787000" />
+      <workItem from="1632565067976" duration="2188000" />
+      <workItem from="1632568328076" duration="1676000" />
+      <workItem from="1632572117212" duration="6102000" />
+      <workItem from="1632578276460" duration="3775000" />
+      <workItem from="1632732924048" duration="144000" />
+      <workItem from="1632738695181" duration="338000" />
+      <workItem from="1632760704557" duration="605000" />
+      <workItem from="1633154194481" duration="4441000" />
+      <workItem from="1633158815697" duration="7924000" />
+      <workItem from="1633170965578" duration="14644000" />
+      <workItem from="1633200764608" duration="7008000" />
+      <workItem from="1633208226502" duration="530000" />
+      <workItem from="1633267151134" duration="2618000" />
+      <workItem from="1633281627792" duration="10882000" />
+      <workItem from="1633327768909" duration="8414000" />
+      <workItem from="1633338254983" duration="2981000" />
+      <workItem from="1633403786798" duration="17217000" />
+      <workItem from="1633543422302" duration="10620000" />
+      <workItem from="1633555324183" duration="169000" />
+      <workItem from="1633582658263" duration="18666000" />
+      <workItem from="1633631946930" duration="2009000" />
+      <workItem from="1633957468763" duration="9181000" />
+      <workItem from="1633969809559" duration="80000" />
+      <workItem from="1634134383683" duration="154000" />
+      <workItem from="1634146604370" duration="3829000" />
+      <workItem from="1634196243335" duration="2771000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="539" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1633206500321">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="539" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.816@0.0.1536.816" timestamp="1633206500321" />
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1633586620109">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="499" y="155" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.816@0.0.1536.816" timestamp="1633586620109" />
+    <state x="516" y="273" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1631902252699">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="516" y="273" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.816@0.0.1536.816" timestamp="1631902252699" />
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1633969897003">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1633969897003" />
+    <state width="1515" height="298" key="GridCell.Tab.0.bottom" timestamp="1633267291009">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="298" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1633267291009" />
+    <state width="1515" height="298" key="GridCell.Tab.0.center" timestamp="1633267291009">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="298" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1633267291009" />
+    <state width="1515" height="298" key="GridCell.Tab.0.left" timestamp="1633267291008">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="298" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1633267291008" />
+    <state width="1515" height="298" key="GridCell.Tab.0.right" timestamp="1633267291009">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state width="1515" height="298" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1633267291009" />
+    <state x="425" y="185" key="run.anything.popup" timestamp="1633409486044">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="425" y="185" key="run.anything.popup/0.0.1536.816@0.0.1536.816" timestamp="1633409486044" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front-end/src/pages/AboutUs/About.js</url>
+          <line>113</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/back_end/model/db.js</url>
+          <line>36</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/back_end/controller/Hackhaton.js</url>
+          <line>6</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front-end/src/components/UpperFooter.js</url>
+          <line>60</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/front-end/src/components/UpperFooter.js</url>
+          <line>83</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
